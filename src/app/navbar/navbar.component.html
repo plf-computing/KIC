@@ -1,12 +1,38 @@
-<div class="flex justify-between items-center py-2 px-4 bg-gradient-to-r from-green-700 via-white to-red-700 w-full">
-    <img class="h-28 w-28 object-cover" src="/images/logokenya.png" alt="">
-    <div> 
-        <ul class="flex justify-between items-center gap-x-6 font-jaini">
-            <li class="uppercase text-3xl font-semibold hover:text-teal-500 cursor-pointer">safaris</li>
-            <li class="uppercase text-3xl font-semibold  hover:text-teal-500 cursor-pointer">excusions</li>
-            <li class="uppercase text-3xl font-semibold  hover:text-yellow-200 cursor-pointer">transfers</li>
-            <li class="uppercase text-3xl font-semibold  hover:text-yellow-200 cursor-pointer">contact us</li>
-            <li class="uppercase text-3xl font-semibold bg-white text-black px-3 py-1 rounded-3xl hover:bg-gradient-to-r hover:from-green-600 via-white to-red-600 cursor-pointer">Book now </li>
-        </ul>
+<nav class="fixed bg-gradient-to-r from-green-600 via-white to-red-600 flex w-full z-50  lg:justify-between items-center   py-1"  >
+    <div (click)="whenClicked()" class="">
+        <a  routerLink="">
+        <img class="object-contain h-24 lg:h-28 " src="/images/logokenya.png" alt="">
+        </a>
     </div>
-</div>
+    <!-- menu for lg screens > -->
+    <div class="flex pr-10">
+        <ul class="hidden lg:flex justify-between items-center gap-x-10 font-jaini text-3xl ">
+            <li>Safaris</li>
+            <li>Excursions</li>
+            <li>Transfers</li>
+            <li>About Us</li>
+            <li class=" bg-white cursor-pointer hover:bg-gradient-to-r hover:from-green-600 via-white to-red-600 px-2 py-1.5 rounded-3xl">Book Now</li>
+        </ul>
+      
+    </div>
+    
+
+    <!-- menu for smaller and medium screens -->
+     <div (click)="showMenu()" class="lg:hidden absolute cursor-pointer right-4 p-2">
+        <i *ngIf="!isOpen" class="fa-solid fa-bars fa-2x text-white" ></i>
+        <i *ngIf="isOpen" class="fa-solid fa-xmark fa-2x text-white" ></i>
+     </div>
+     <div (click)="whenClicked()" *ngIf="isOpen"  class="absolute lg:hidden cursor-pointer top-[100px] w-full h-96 bg-white pt-4 pl-4">
+       
+        <ul class="font-jaini text-2xl leading-[50px]">
+            <li>Safaris</li>
+            <li>Excursions</li>
+            <li>Transfers</li>
+            <li>About Us</li>
+            <li class="  cursor-pointer bg-gradient-to-r from-green-600 via-white to-red-600 hover:bg-gradient-to-r hover:from-red-600 hover:via-white hover:to-green-600  rounded-3xl w-1/4 text-center">Book Now</li>
+        </ul>
+        
+     </div>
+    
+
+</nav>
