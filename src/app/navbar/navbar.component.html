@@ -7,7 +7,7 @@
     <!-- menu for lg screens > -->
     <div class="flex pr-10">
         <ul class="hidden lg:flex justify-between items-center gap-x-10 font-jaini text-3xl ">
-            <li>Safaris</li>
+            <li class="hover:text-green-600 cursor-pointer" routerLink="/safaris" routerLinkActive="text-green-600">Safaris</li>
             <li>Excursions</li>
             <li>Transfers</li>
             <li>About Us</li>
@@ -25,7 +25,7 @@
      <div (click)="whenClicked()" *ngIf="isOpen"  class="absolute lg:hidden cursor-pointer top-[100px] w-full h-96 bg-white pt-4 pl-4">
        
         <ul class="font-jaini text-2xl leading-[50px]">
-            <li>Safaris</li>
+            <li class="hover:text-green-600 cursor-pointer" routerLink="/safaris" routerLinkActive="text-green-600">Safaris</li>
             <li>Excursions</li>
             <li>Transfers</li>
             <li>About Us</li>
