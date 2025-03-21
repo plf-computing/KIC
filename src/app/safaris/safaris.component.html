@@ -19,14 +19,16 @@
  
 <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:grid-rows-[auto,1fr,auto] gap-6 lg:mx-20  flex flex-col justify-center items-center md:items-start pt-10">
     @for (item of safaris;track item.title){
-        <div class="md:grid md:grid-rows-subgrid md:row-span-3 flex flex-col justify-between items-start ">
-            <div class="relative group overflow-hidden ">
+        <div  class="md:grid md:grid-rows-subgrid md:row-span-3 flex flex-col justify-between items-start ">
+            <a [routerLink]="['/safaris', item.slug]" ><div class="relative group overflow-hidden ">
                 <img class=" rounded-2xl shadow-amber-400 h-72 w-96 md:w-72 object-cover" src="{{item.image}}" alt="">
-                <div class="absolute inset-0 bg-black/40 p-4 rounded-2xl flex items-end ">
+                <div class="absolute inset-0 bg-black/40 p-4 rounded-2xl flex flex-col justify-end items-start">
                     <p class="font-extrabold text-3xl text-white font-alfa ">{{item.title}}</p>
+                    <p class="font-extrabold text-xl text-white font-alfa ">{{item.title2}}</p>
+                   
                 </div>
                 
-            </div>
+            </div></a>
             
            
         </div>

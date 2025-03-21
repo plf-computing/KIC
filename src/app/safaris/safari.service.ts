@@ -16,6 +16,7 @@ interface SafariDay{
 }
 interface SafariItenary{
   name:string;
+  title2:string
   duration:number;
   days:SafariDay[];
   notes:string;
@@ -32,8 +33,7 @@ export class SafariService {
       
       image:'/images/zebra.gif',
       title:'SAFARI NALA',
-      title2:'2 DAYS 1 NIGHT SAFARI - TSAVO EAST',
-      
+      title2:'2 DAYS 1 NIGHT SAFARI - TSAVO EAST', 
       description:'Explore one of the largest animal sanctuaries in the world on Kenyan safari holiday: Tsavo National Park. Visit Kenyas largest game reserve!',
       description2:'Tsavo East includes several types of habitats: it is mainly flat, with large areas of savannah crossed by the Galana River , the union of Tsavo and Athi. The main relief is the Yatta Plateau, which with its 190 km of length represents the largest lava surface in the world.Due to its exceptional biodiversity, the park is considered one of the most valuable nature reserves in the world.'
     },
@@ -46,20 +46,15 @@ export class SafariService {
       description:'Masai Mara National Reserve is one of the most popular tourism destinations in Kenya- Africa. The reserve is located in the Great Rift Valley',
       description2:'The park is home to all the so-called Big Five (lions, leopards, elephants, rhinos and buffalo) but the main inhabitants are the wildebeest (millions of them). They migrate from the Serengeti to the Masai Mara in spring and vice versa in autumn. There are also numerous other species of antelope, in particular the Thomsons gazelle and Grants gazelle, the impala, and others. Large herds of zebras are found throughout the reserve. The plains also inhabit the Masai giraffes. The birdlife includes hundreds of species.'
     },
-  
-
-
     {
       
       image:'/images/leo.gif',
       title:'SAFARI ZAZU',
       title2:'4 DAY 3 NIGHTS SAFARI AMBOSELI -TAITA HILLS - TSAVO EAST ',
-      
-      
+
       description:'These 3 parks offer some of the best opportunities to see African wildlife , plus the landscapes are at their most beautiful after the rainy season, when everything seems to...',
       description2:'Being a corridor between Tsavo East and Tsavo West, the <strong>Taita Hills</strong> are the ideal place to go on a safari different from the others. <br>They are made up of three massifs: <strong>Dabida, Sagalla</strong> in the southern part of the Voi municipality and Kasigau in the south, near the border with Tanzania. In particular, the Dabida massif is the largest and highest of the three, with an altitude of 2,228 meters.<br><br><strong>Amboseli</strong> is known to be the<strong> best place in the world</strong> to get close to wild elephants, on the other hand other attractions of the park include the opportunity to meet Maasai and visit the Maasai village. Finally the park also has a <strong>breathtaking view of Mount Kilimanjaro</strong> , the highest free-standing mountain in the world.<br><br>In conclusion,These 3 parks offer some of the best opportunities to see <strong>African wildlife</strong> , plus the landscapes are at their most beautiful after the rainy season, when everything seems to take on pink tones and the acacia trees are covered in beautiful white flowers.'
     },
-
     {
      
       image:'/images/bird.gif',
@@ -70,8 +65,6 @@ export class SafariService {
       description:'Explore Tsavo West National Park holidays and discover the best time and places to visit. | Welcome to the wilderness. Tsavo is one of Kenyas larger ...',
       description2:'Tsavo is the largest natural park in the country (almost as large as the whole of Tuscany). The park, which takes its name from the river that flows through it, was opened in April 1948 and is divided into Tsavo East and Tsavo West, divided by the A109, the road that goes from Nairobi to Mombasa.<br><br><strong>Tsavo West</strong> is where, at the beginning of the last century, the <strong>legend of the man-eating lions</strong> that inspired the film “The Ghost and the Darkness” took root, “opposing” the construction of the railway that would have connected the southern coast of Kenya with Uganda. <br>Tsavo West contains several spectacular habitats: riverine forests, mountains, lakes and vast plains.<br><br><strong>Amboseli</strong> is known as the best place in the world to get up close to free-roaming elephants. Other attractions in the park include the opportunity to meet Maasai and visit the Maasai village. The park also has views of <strong>Mount Kilimanjaro</strong> , the worlds highest free-standing mountain.'
     },
-
-
     {
     
       image:'/images/wild.gif',
@@ -95,7 +88,8 @@ export class SafariService {
 
   safariItenaries:SafariItenary[]=[
     {
-      name:'2 DAYS 1 NIGHT SAFARI - TSAVO EAST',
+      name:'SAFARI NALA',
+      title2:'2 DAYS 1 NIGHT SAFARI - TSAVO EAST',
       duration:2,
       days:[
         {
@@ -114,7 +108,8 @@ export class SafariService {
     },
    
     {
-      name:'3 DAYS 2 NIGHTS SAFARI - TSAVO EAST & AMBOSELI',
+      name:'SAFARI SARABI',
+      title2:'3 DAYS 2 NIGHTS SAFARI - TSAVO EAST & AMBOSELI',
       duration:3,
       days:[
         {
@@ -136,7 +131,8 @@ export class SafariService {
       notes:'<strong>Notes</strong>– The lodges and tented camps are chosen based on the safari period and the movement of the animals in certain areas of the park, so that you can visit the areas richest in animals.<br>– The route could be done in reverse.'
     },
     {
-      name:'4 DAY 3 NIGHTS SAFARI AMBOSELI -TAITA HILLS - TSAVO EAST',
+      name:'SAFARI ZAZU',
+      title2:'4 DAY 3 NIGHTS SAFARI AMBOSELI -TAITA HILLS - TSAVO EAST ',
       duration:4,
       days:[
         {
@@ -166,8 +162,9 @@ export class SafariService {
       notes:'<strong>Notes</strong>– The lodges and tented camps are chosen based on the safari period and the movement of the animals in certain areas of the park, so that you can visit the areas richest in animals.<br>– The route could be done in reverse.'
     },
     {
-      name:'5 DAYS 4 NIGHTS SAFARI - MASAI MARA - AMBOSELI - TSAVO EAST - WATAMU',
-      duration:4,
+      name:'SAFARI RAFIKI',
+      title2:'5 DAYS 4 NIGHTS SAFARI - MASAI MARA - AMBOSELI - TSAVO EAST - WATAMU',
+      duration:5,
       days:[
         {
           day:'Day 1',
@@ -203,7 +200,8 @@ export class SafariService {
 
     },
     {
-      name:'6 DAYS 5 NIGHTS SAFARI - MASAI MARA - LAKE NAKURU - AMBOSELI - TSAVO EAST - WATAMU',
+      name:'SAFARI SIMBA',
+      title2:'6 DAYS 5 NIGHTS SAFARI - MASAI MARA - LAKE NAKURU - AMBOSELI - TSAVO EAST',
       duration:6,
       days:[
         {
@@ -241,7 +239,8 @@ export class SafariService {
       notes:'<strong>Notes</strong>– The lodges and tented camps are chosen based on the safari period and the movement of the animals in certain areas of the park, so that you can visit the areas richest in animals.'
     },
     {
-      name:'7 DAYS SAFARI 6 NIGHTS - MASAI MARA - LAKE NAKURU -AMBOSELI -TAITA HILLS - TSAVO EAST - WATAMU',
+      name:'SAFARI MUFASA',
+      title2:'7 DAYS SAFARI 6 NIGHTS - MASAI MARA - LAKE NAKURU -AMBOSELI - TSAVO EAST - WATAMU',
       duration:7,
       days:[
         {

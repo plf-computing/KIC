@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-safaris',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './safaris.component.html',
   styleUrl: './safaris.component.css'
 })

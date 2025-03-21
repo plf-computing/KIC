@@ -1,0 +1,7 @@
+<div
+  class="fixed bottom-10 left-1/2 md:left-3/4 transform -translate-x-1/2 px-5 py-2 rounded-lg text-white text-sm md:text-base z-50 "
+  *ngIf="show"
+  [ngClass]="type === 'success' ? 'bg-green-500' : 'bg-red-600'"
+>
+  {{ message }}
+</div>

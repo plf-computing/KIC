@@ -1,1 +1,131 @@
-<p>safari-details works!</p>
+<div class="pt-24">
+    <div >
+        <img class="w-full  object-cover" src="/images/masai.jpg" alt="">
+    </div>
+
+    <div *ngIf="safaris && safariItenaries" class="flex flex-col justify-between mx-4 lg:mx-14 pt-10">
+        <div class="flex flex-col justify-center items-center pb-6">
+            <p class="text-2xl text-amber-800 uppercase font-black font-mono relative after:content-[''] after:block after:w-36 after:h-0.5 after:bg-amber-800 after:mx-auto after:mt-1 ">{{safaris.title}}</p>
+            <p class="text-xl text-center text-amber-800 uppercase font-black font-mono">{{safariItenaries.title2}}</p>
+        </div>
+        <p class="font-semibold text-amber-900 text-lg">Summary</p>
+        <p [innerHTML]="safaris.description2" class="text-base leading-8 font-serif">{{safaris.description2}}</p>
+
+    </div>
+    <div *ngIf="safariItenaries" class="flex flex-col justify-between gap-y-6 mx-4 lg:mx-14 pt-4">
+        <p class="font-semibold text-amber-900 text-lg pb-4">ITINERARY</p>
+        <p class="text-lG font-bold font-monomakh text-amber-900">{{safariItenaries.name}}</p>
+        <div *ngIf="safariItenaries.days && safariItenaries.days.length > 0" class="flex flex-col justify-between gap-y-6">
+            <div *ngFor="let day of safariItenaries.days" class="flex flex-col justify-between gap-y-4">
+                <p class="text-lg font-semibold text-amber-900">{{day.day}}</p>
+                <p class="font-semibold text-lg text-amber-900">{{day.location}}</p>
+                <p class="text-base leading-8 font-serif" >{{day.description}}</p>
+
+            </div>
+
+        </div>
+
+     
+
+    </div>
+
+   
+
+
+
+</div>
+<div class="grid md:grid-cols-3 gap-4 lg:mx-36 pl-6 md:pl-2 pt-4 items-start pb-4">
+    <!-- Column 1 -->
+    <div class="flex flex-col h-full  p-4">
+      <div><i class="fa-solid fa-check text-yellow-400 fa-3x"></i></div>
+      <p class="text-2xl text-yellow-400 font-serif font-semibold">What's included</p>
+      <div class="flex-grow">
+        <p class="text-sm md:text-base text-slate-500">
+          <i class="fa-solid fa-arrow-right pr-2 text-yellow-400"></i>Local guide and/or authorized driver
+        </p>
+        <p class="text-sm md:text-base text-slate-500">
+          <i class="fa-solid fa-arrow-right pr-2 text-yellow-400"></i>Entrance to the Natural Parks
+        </p>
+        <p class="text-sm md:text-base text-slate-500">
+          <i class="fa-solid fa-arrow-right pr-2 text-yellow-400"></i>4x4 car with sunroof
+        </p>
+        <p class="text-sm md:text-base text-slate-500">
+          <i class="fa-solid fa-arrow-right pr-2 text-yellow-400"></i>Insurance
+        </p>
+        <p class="text-sm md:text-base text-slate-500">
+          <i class="fa-solid fa-arrow-right pr-2 text-yellow-400"></i>Overnight stay
+        </p>
+        <p class="text-sm md:text-base text-slate-500">
+            <i class="fa-solid fa-arrow-right pr-2 text-yellow-400"></i>Lunch and dinner
+          </p>
+        
+          <p class="text-sm md:text-base text-slate-500">
+            <i class="fa-solid fa-arrow-right pr-2 text-yellow-400"></i>Water during Game Drives
+          </p>
+      </div>
+    </div>
+  
+    <!-- Column 2 -->
+    <div class="flex flex-col h-full  p-4">
+      <div><i class="fa-solid fa-xmark text-red-600 fa-3x"></i></div>
+      <p class="text-2xl text-red-600 font-serif font-semibold">What's not included</p>
+      <div class="flex-grow">
+        <p class="text-sm md:text-base text-slate-500">
+          <i class="fa-solid fa-arrow-right pr-2 text-red-600"></i>Drinks with meals
+        </p>
+        <p class="text-sm md:text-base text-slate-500">
+          <i class="fa-solid fa-arrow-right pr-2 text-red-600"></i>Entrance to the Natural Parks
+        </p>
+        <p class="text-sm md:text-base text-slate-500">
+          <i class="fa-solid fa-arrow-right pr-2 text-red-600"></i>Anything not specified in the "what is included" paragraph
+        </p>
+      </div>
+    </div>
+  
+    <!-- Column 3 -->
+    <div class="flex flex-col h-full  p-4">
+      <div><i class="fa-solid fa-thumbs-up text-gray-800 fa-3x"></i></div>
+      <p class="text-2xl text-gray-800 font-serif font-semibold">Recommended clothing</p>
+      <div class="flex-grow ">
+        <p class="text-sm md:text-base text-slate-500">
+          <i class="fa-solid fa-arrow-right pr-2 text-gray-800"></i>T-shirt and shorts (light colors)
+        </p>
+        <p class="text-sm md:text-base text-slate-500">
+          <i class="fa-solid fa-arrow-right pr-2 text-gray-800"></i>Comfortable shoes
+        </p>
+        <p class="text-sm md:text-base text-slate-500">
+          <i class="fa-solid fa-arrow-right pr-2 text-gray-800"></i>Swimsuit for the pool
+        </p>
+        <p class="text-sm md:text-base text-slate-500">
+          <i class="fa-solid fa-arrow-right pr-2 text-gray-800"></i>Mosquito repellent
+        </p>
+        <p class="text-sm md:text-base text-slate-500">
+            <i class="fa-solid fa-arrow-right pr-2 text-gray-800"></i>Sunscreen
+          </p>
+          <p class="text-sm md:text-base text-slate-500">
+            <i class="fa-solid fa-arrow-right pr-2 text-gray-800"></i>Hat or bandana
+          </p>
+          <p class="text-sm md:text-base text-slate-500">
+            <i class="fa-solid fa-arrow-right pr-2 text-gray-800"></i>Sunglasses
+          </p>
+          <p class="text-sm md:text-base text-slate-500">
+            <i class="fa-solid fa-arrow-right pr-2 text-gray-800"></i>Light sweatshirt for the evening
+          </p>
+          <p class="text-sm md:text-base text-slate-500">
+            <i class="fa-solid fa-arrow-right pr-2 text-gray-800"></i>Camera
+        </p>
+         <p class="text-sm md:text-base text-slate-500">
+                <i class="fa-solid fa-arrow-right pr-2 text-gray-800"></i>Type G power adapter
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    
+  </div>
+
+  <app-safari-form/>
+ 
+  
+  
