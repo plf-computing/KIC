@@ -54,7 +54,7 @@ export class SafariFormComponent {
   
     const formValues = this.safariForm.value;
   
-    const message = `Hello, I am interested in a safari booking!%0A
+    const message = `Hello, I am interested in your safari booking!%0A
     Email: ${formValues.email}%0A
     Number of Adults: ${formValues.adults}%0A
     Number of Children: ${formValues.children}%0A
