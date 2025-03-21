@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
 
+
 @theme {
-    --font-jaini:"Jaini", system-ui
+    --font-jaini:"Jaini", system-ui;
+    --font-alfa:"Big Shoulders Inline",sans-serif;
 }

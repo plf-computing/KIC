@@ -30,7 +30,7 @@ export class SafariService {
   safaris:Safari[]=[
     {
       
-      image:'/images/1.jpg',
+      image:'/images/zebra.gif',
       title:'SAFARI NALA',
       title2:'2 DAYS 1 NIGHT SAFARI - TSAVO EAST',
       
@@ -39,7 +39,7 @@ export class SafariService {
     },
     {
       
-      image:'/images/2.jpg',
+      image:'/images/elephant.gif',
       title:'SAFARI SARABI',
       title2:'3 DAYS 2 NIGHTS SAFARI - TSAVO EAST & AMBOSELI',
      
@@ -51,7 +51,7 @@ export class SafariService {
 
     {
       
-      image:'/images/4.jpg',
+      image:'/images/leo.gif',
       title:'SAFARI ZAZU',
       title2:'4 DAY 3 NIGHTS SAFARI AMBOSELI -TAITA HILLS - TSAVO EAST ',
       
@@ -62,7 +62,7 @@ export class SafariService {
 
     {
      
-      image:'/images/5.jpg',
+      image:'/images/bird.gif',
 
       title:'SAFARI RAFIKI',
       title2:'5 DAYS 4 NIGHTS SAFARI - MASAI MARA - AMBOSELI - TSAVO EAST - WATAMU',
@@ -74,7 +74,7 @@ export class SafariService {
 
     {
     
-      image:'/images/6.jpg',
+      image:'/images/wild.gif',
       title:'SAFARI SIMBA',
       title2:'6 DAYS 5 NIGHTS SAFARI - MASAI MARA - LAKE NAKURU - AMBOSELI - TSAVO EAST',
       
@@ -82,7 +82,7 @@ export class SafariService {
       description2:'This incredible tour starts from Nairobi and ends in Mombasa or Watamu.<br><br>Tsavo East is the second largest park in the country  in terms of number of animals and due to its exceptional biodiversity, the park is considered one of the <strong>most precious nature reserves</strong> in the world. <br><br>Amboseli is known as the <strong>best place in the world</strong> to get up close to free-roaming elephants. Other attractions in the park include the opportunity to meet Maasai and visit the Maasai village. The park also has views of <strong>Mount Kilimanjaro</strong> , the worlds highest free-standing mountain.<br><br><strong>The Maasai Mara</strong> borders the Serengeti Park in Tanzania with which it forms a single ecosystem. The reserve is known for its exceptional concentration of fauna and for the famous migration of wildebeest and zebras that begins in July from Serengeti to Masai Mara and then back to Serengeti in September/October. All the Big Five (lion, rhino, elephant, buffalo, leopard) are present in the park although the rhino population is in serious danger. Hippos are numerous in the Mara River and the Talek River. You can see them while you are on the veranda of the camp. <br><br>Lake <strong>Nakuru National Park</strong>  is located in the area of ​​the shallow, alkaline lake of the same name. The park also includes marshy areas, forest and low rocky reliefs where you can admire, in addition to millions of species of birds, also animals that are difficult to spot such as rhinos (both white and, although rare, the shy black rhinos).<br>Arriving from above, you can see thousands of pink dots on the water: they are flamingos! From time to time, suddenly rising in small groups in flight, they cover the sky like a pink sheet… During the dry season, the lake retreats, leaving a white and shiny crust of bicarbonate on the shores, creating a magical landscape with an almost surreal touch.'
     },
     {
-      image:'/images/7.jpg',
+      image:'/images/lion.gif',
       title:'SAFARI MUFASA',
       title2:'7 DAYS SAFARI 6 NIGHTS - MASAI MARA - LAKE NAKURU -AMBOSELI - TSAVO EAST - WATAMU',
       description:'Masai Mara National Reserve is one of the most popular tourism destinations in Kenya- Africa. The reserve is located in the Great Rift Valley in primarily open ...',
