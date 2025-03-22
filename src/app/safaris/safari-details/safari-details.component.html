@@ -22,12 +22,21 @@
                 <p class="text-base leading-8 font-serif" >{{day.description}}</p>
 
             </div>
+           
 
         </div>
 
      
 
     </div>
+
+    
+      <div *ngIf="safariItenaries" class="pl-10 pt-10">
+        <p [innerHTML]="safariItenaries.notes" class="font-serif italic pl-4">{{safariItenaries.notes}}</p>
+
+      </div>
+      
+    
 
    
 
@@ -42,6 +51,9 @@
       <div class="flex-grow">
         <p class="text-sm md:text-base text-slate-500">
           <i class="fa-solid fa-arrow-right pr-2 text-yellow-400"></i>Local guide and/or authorized driver
+        </p>
+        <p class="text-sm md:text-base text-slate-500">
+          <i class="fa-solid fa-arrow-right pr-2 text-red-600"></i>Entrance to the Natural Parks
         </p>
         <p class="text-sm md:text-base text-slate-500">
           <i class="fa-solid fa-arrow-right pr-2 text-yellow-400"></i>Entrance to the Natural Parks
@@ -73,9 +85,7 @@
         <p class="text-sm md:text-base text-slate-500">
           <i class="fa-solid fa-arrow-right pr-2 text-red-600"></i>Drinks with meals
         </p>
-        <p class="text-sm md:text-base text-slate-500">
-          <i class="fa-solid fa-arrow-right pr-2 text-red-600"></i>Entrance to the Natural Parks
-        </p>
+        
         <p class="text-sm md:text-base text-slate-500">
           <i class="fa-solid fa-arrow-right pr-2 text-red-600"></i>Anything not specified in the "what is included" paragraph
         </p>

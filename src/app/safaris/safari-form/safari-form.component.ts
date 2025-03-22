@@ -2,6 +2,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { SafariService } from '../safari.service';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { SnackbarComponent } from '../../snackbar/snackbar.component';
 
 @Component({
@@ -24,6 +25,7 @@ export class SafariFormComponent {
     this.allSafaris = this.safariService.getSafaris();
 
     this.safariForm = this.fb.group({
+      name:['',Validators.required],
       safari: ['', Validators.required],
       adults: ['', [Validators.required, Validators.min(1), Validators.max(50)]],
       children: ['',[Validators.min(1), Validators.max(50)]],
@@ -42,35 +44,35 @@ export class SafariFormComponent {
     }
   }
 
-  onSubmit() {
-    this.safariForm.markAllAsTouched(); 
+  public sendEmail(e: Event) {
+    e.preventDefault();
   
-    if (this.safariForm.invalid) {
-      this.snackbar.message = 'Please fill the required fields correctly!';
-      this.snackbar.type = 'error';
-      this.snackbar.showSnackbar();
-      return; 
+     // Check if the form is valid
+     if (this.safariForm.invalid) {
+      // Mark all fields as touched to show validation errors
+      this.safariForm.markAllAsTouched();
+      return; // Exit if the form is invalid
     }
   
-    const formValues = this.safariForm.value;
   
-    const message = `Hello, I am interested in your safari booking!%0A
-    Email: ${formValues.email}%0A
-    Number of Adults: ${formValues.adults}%0A
-    Number of Children: ${formValues.children}%0A
-    Safari: ${formValues.safari}%0A
-    Departure Date: ${formValues.departure}%0A
-    Phone Number: ${formValues.phone}%0A
-    Message: ${formValues.message || "No additional message"}`;
-  
-    const whatsappURL = `https://wa.me/${this.whatsappNumber}?text=${message}`;
-  
-    this.snackbar.message = 'Request sent successfully!';
-    this.snackbar.type = 'success';
-    this.snackbar.showSnackbar();
-    this.safariForm.reset();
-    
-    window.open(whatsappURL, '_blank');
-  }
+      emailjs
+      .sendForm('service_8i43k9a', 'template_s0fjr3i', e.target as HTMLFormElement, 
+        'y7gT77GKEiOEsXfBN',
+      )
+      .then(
+        () => {
+          this.snackbar.message = 'Request sent successfully!'
+          this.snackbar.type = 'success'
+          this.snackbar.showSnackbar()
+          this.safariForm.reset()
+        },
+        (error) => {
+          this.snackbar.message = 'Failed to send email. Please try again.';
+          this.snackbar.type = 'error';
+          this.snackbar.showSnackbar();
+         
+        },
+      );
+    }
 
 }

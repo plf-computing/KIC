@@ -33,7 +33,7 @@ export class SafariService {
       
       image:'/images/zebra.gif',
       title:'SAFARI NALA',
-      title2:'2 DAYS 1 NIGHT SAFARI - TSAVO EAST', 
+      title2:'2 DAYS 1 NIGHT  - TSAVO EAST', 
       description:'Explore one of the largest animal sanctuaries in the world on Kenyan safari holiday: Tsavo National Park. Visit Kenyas largest game reserve!',
       description2:'Tsavo East includes several types of habitats: it is mainly flat, with large areas of savannah crossed by the Galana River , the union of Tsavo and Athi. The main relief is the Yatta Plateau, which with its 190 km of length represents the largest lava surface in the world.Due to its exceptional biodiversity, the park is considered one of the most valuable nature reserves in the world.'
     },
@@ -41,7 +41,7 @@ export class SafariService {
       
       image:'/images/elephant.gif',
       title:'SAFARI SARABI',
-      title2:'3 DAYS 2 NIGHTS SAFARI - TSAVO EAST & AMBOSELI',
+      title2:'3 DAYS 2 NIGHTS  - TSAVO EAST & AMBOSELI',
      
       description:'Masai Mara National Reserve is one of the most popular tourism destinations in Kenya- Africa. The reserve is located in the Great Rift Valley',
       description2:'The park is home to all the so-called Big Five (lions, leopards, elephants, rhinos and buffalo) but the main inhabitants are the wildebeest (millions of them). They migrate from the Serengeti to the Masai Mara in spring and vice versa in autumn. There are also numerous other species of antelope, in particular the Thomsons gazelle and Grants gazelle, the impala, and others. Large herds of zebras are found throughout the reserve. The plains also inhabit the Masai giraffes. The birdlife includes hundreds of species.'
@@ -50,7 +50,7 @@ export class SafariService {
       
       image:'/images/leo.gif',
       title:'SAFARI ZAZU',
-      title2:'4 DAY 3 NIGHTS SAFARI AMBOSELI -TAITA HILLS - TSAVO EAST ',
+      title2:'4 DAY 3 NIGHTS - AMBOSELI -TAITA HILLS - TSAVO EAST ',
 
       description:'These 3 parks offer some of the best opportunities to see African wildlife , plus the landscapes are at their most beautiful after the rainy season, when everything seems to...',
       description2:'Being a corridor between Tsavo East and Tsavo West, the <strong>Taita Hills</strong> are the ideal place to go on a safari different from the others. <br>They are made up of three massifs: <strong>Dabida, Sagalla</strong> in the southern part of the Voi municipality and Kasigau in the south, near the border with Tanzania. In particular, the Dabida massif is the largest and highest of the three, with an altitude of 2,228 meters.<br><br><strong>Amboseli</strong> is known to be the<strong> best place in the world</strong> to get close to wild elephants, on the other hand other attractions of the park include the opportunity to meet Maasai and visit the Maasai village. Finally the park also has a <strong>breathtaking view of Mount Kilimanjaro</strong> , the highest free-standing mountain in the world.<br><br>In conclusion,These 3 parks offer some of the best opportunities to see <strong>African wildlife</strong> , plus the landscapes are at their most beautiful after the rainy season, when everything seems to take on pink tones and the acacia trees are covered in beautiful white flowers.'
@@ -60,7 +60,7 @@ export class SafariService {
       image:'/images/bird.gif',
 
       title:'SAFARI RAFIKI',
-      title2:'5 DAYS 4 NIGHTS SAFARI - MASAI MARA - AMBOSELI - TSAVO EAST - WATAMU',
+      title2:'5 DAYS 4 NIGHTS  - MASAI MARA - AMBOSELI - TSAVO EAST - WATAMU',
       
       description:'Explore Tsavo West National Park holidays and discover the best time and places to visit. | Welcome to the wilderness. Tsavo is one of Kenyas larger ...',
       description2:'Tsavo is the largest natural park in the country (almost as large as the whole of Tuscany). The park, which takes its name from the river that flows through it, was opened in April 1948 and is divided into Tsavo East and Tsavo West, divided by the A109, the road that goes from Nairobi to Mombasa.<br><br><strong>Tsavo West</strong> is where, at the beginning of the last century, the <strong>legend of the man-eating lions</strong> that inspired the film “The Ghost and the Darkness” took root, “opposing” the construction of the railway that would have connected the southern coast of Kenya with Uganda. <br>Tsavo West contains several spectacular habitats: riverine forests, mountains, lakes and vast plains.<br><br><strong>Amboseli</strong> is known as the best place in the world to get up close to free-roaming elephants. Other attractions in the park include the opportunity to meet Maasai and visit the Maasai village. The park also has views of <strong>Mount Kilimanjaro</strong> , the worlds highest free-standing mountain.'
@@ -69,7 +69,7 @@ export class SafariService {
     
       image:'/images/wild.gif',
       title:'SAFARI SIMBA',
-      title2:'6 DAYS 5 NIGHTS SAFARI - MASAI MARA - LAKE NAKURU - AMBOSELI - TSAVO EAST',
+      title2:'6 DAYS 5 NIGHTS  - MASAI MARA - LAKE NAKURU - AMBOSELI - TSAVO EAST',
       
       description:'This incredible tour starts from Nairobi and ends in Mombasa,Malindi or Watamu.',
       description2:'This incredible tour starts from Nairobi and ends in Mombasa or Watamu.<br><br>Tsavo East is the second largest park in the country  in terms of number of animals and due to its exceptional biodiversity, the park is considered one of the <strong>most precious nature reserves</strong> in the world. <br><br>Amboseli is known as the <strong>best place in the world</strong> to get up close to free-roaming elephants. Other attractions in the park include the opportunity to meet Maasai and visit the Maasai village. The park also has views of <strong>Mount Kilimanjaro</strong> , the worlds highest free-standing mountain.<br><br><strong>The Maasai Mara</strong> borders the Serengeti Park in Tanzania with which it forms a single ecosystem. The reserve is known for its exceptional concentration of fauna and for the famous migration of wildebeest and zebras that begins in July from Serengeti to Masai Mara and then back to Serengeti in September/October. All the Big Five (lion, rhino, elephant, buffalo, leopard) are present in the park although the rhino population is in serious danger. Hippos are numerous in the Mara River and the Talek River. You can see them while you are on the veranda of the camp. <br><br>Lake <strong>Nakuru National Park</strong>  is located in the area of ​​the shallow, alkaline lake of the same name. The park also includes marshy areas, forest and low rocky reliefs where you can admire, in addition to millions of species of birds, also animals that are difficult to spot such as rhinos (both white and, although rare, the shy black rhinos).<br>Arriving from above, you can see thousands of pink dots on the water: they are flamingos! From time to time, suddenly rising in small groups in flight, they cover the sky like a pink sheet… During the dry season, the lake retreats, leaving a white and shiny crust of bicarbonate on the shores, creating a magical landscape with an almost surreal touch.'
@@ -77,7 +77,7 @@ export class SafariService {
     {
       image:'/images/lion.gif',
       title:'SAFARI MUFASA',
-      title2:'7 DAYS SAFARI 6 NIGHTS - MASAI MARA - LAKE NAKURU -AMBOSELI - TSAVO EAST - WATAMU',
+      title2:'7 DAYS  6 NIGHTS - MASAI MARA - LAKE NAKURU -AMBOSELI - TAITA HILLS - TSAVO EAST - WATAMU',
       description:'Masai Mara National Reserve is one of the most popular tourism destinations in Kenya- Africa. The reserve is located in the Great Rift Valley in primarily open ...',
       description2:'This incredible tour starts from Nairobi and ends in Mombasa or Watamu.<br><br>Tsavo East is the second largest park in the country  in terms of number of animals and due to its exceptional biodiversity, the park is considered one of the <strong>most precious nature reserves</strong> in the world.<br><br>Tsavo West is where, at the beginning of the last century, the <strong>legend of the man-eating lions </strong> that inspired the film “The Ghost and the Darkness” took root, “opposing” the construction of the railway that would have connected the southern coast of Kenya with Uganda. Tsavo West contains several spectacular habitats: riverine forests, mountains, lakes and vast plains. <br><br>Amboseli is known as the <strong>best place in the world</strong> to get up close to free-roaming elephants. Other attractions in the park include the opportunity to meet Maasai and visit the Maasai village. The park also has views of <strong>Mount Kilimanjaro</strong> , the worlds highest free-standing mountain.<br><br><strong>The Maasai Mara</strong> borders the Serengeti Park in Tanzania with which it forms a single ecosystem. The reserve is known for its exceptional concentration of fauna and for the famous migration of wildebeest and zebras that begins in July from Serengeti to Masai Mara and then back to Serengeti in September/October. All the Big Five (lion, rhino, elephant, buffalo, leopard) are present in the park although the rhino population is in serious danger. Hippos are numerous in the Mara River and the Talek River. You can see them while you are on the veranda of the camp. <br><br>Lake <strong>Nakuru National Park</strong>  is located in the area of ​​the shallow, alkaline lake of the same name. The park also includes marshy areas, forest and low rocky reliefs where you can admire, in addition to millions of species of birds, also animals that are difficult to spot such as rhinos (both white and, although rare, the shy black rhinos).<br>Arriving from above, you can see thousands of pink dots on the water: they are flamingos! From time to time, suddenly rising in small groups in flight, they cover the sky like a pink sheet… During the dry season, the lake retreats, leaving a white and shiny crust of bicarbonate on the shores, creating a magical landscape with an almost surreal touch.'
     }
@@ -103,7 +103,7 @@ export class SafariService {
           description:'The second day we wake up at 5.00am then at 6.00am we have breakfast and at 6.30am we take our suitcase and leave for the morning game and look for animals that we are not seen until 10.00am then we leave the park because the ticket lasts 24 hours. We take 2 hours of road that at 1.00pm we return to the hotel / private house. You are very welcome in our country of watamu Kenya 🇰🇪. In Kenya with Beach Bay'
         }
       ],
-      notes:''
+      notes:'<strong>SELECTED LODGE OR CAMP(SUBJECT TO AVAILABILITY)</strong><br><strong>Tsavo East</strong> <br>Sentrim Tari Camp <br> Voi Safari Lodge <br>Voi Wildlife Lodge <br>Manyatta Luxury Camp'
 
     },
    
@@ -128,7 +128,7 @@ export class SafariService {
           description:'Wake up at 5.00am, takes a shower, then at 6.00am breakfast begins, after breakfast we take our suitcase and leave, we do another morning tour inside the park until 9.00am then we go out, take the road to return to Watamu, at 1.00pm we stop in a restaurant to eat lunch, after lunch we leave for Watamu and at 4.30pm we return to the hotel / private house (villa).'
         }
       ],
-      notes:'<strong>Notes</strong>– The lodges and tented camps are chosen based on the safari period and the movement of the animals in certain areas of the park, so that you can visit the areas richest in animals.<br>– The route could be done in reverse.'
+      notes:'<strong>SELECTED LODGE OR CAMP(SUBJECT TO AVAILABILITY)</strong> <br><strong>Tsavo East </strong> <br>- Sentrim Tari Camp <br>- Manyatta Luxury Camp <br>- Voi Safari Lodge <br>- Voi Wildlife Lodge <br><br><strong>Amboseli</strong> <br>- Sentrim Tari Camp <br>- AA lodge <br> - Kilima Camp'
     },
     {
       name:'SAFARI ZAZU',
@@ -159,7 +159,7 @@ export class SafariService {
 
         }
       ],
-      notes:'<strong>Notes</strong>– The lodges and tented camps are chosen based on the safari period and the movement of the animals in certain areas of the park, so that you can visit the areas richest in animals.<br>– The route could be done in reverse.'
+      notes:'<strong>SELECTED LODGE OR CAMP(SUBJECT TO AVAILABILITY)</strong> <br><strong>Amboseli</strong> <br>- Sentrim Tari Camp <br>- AA lodge <br> - Kilima Camp<br><strong>Tsavo East </strong> <br>- Sentrim Tari Camp <br>- Manyatta Luxury Camp <br>- Voi Safari Lodge <br>- Voi Wildlife Lodge <br> <strong>Taita Hills</strong> <br>- Sarova Salt Lick Game Lodge <br><strong>Masai Mara</strong> <br>- AA Lodge <br>- Sentrim Fig Tree'
     },
     {
       name:'SAFARI RAFIKI',
@@ -195,7 +195,7 @@ export class SafariService {
         
         
       ],
-      notes:'<strong>Notes</strong>– The lodges and tented camps are chosen based on the safari period and the movement of animals in certain areas of the park, so that you can visit the areas richest in animals.<br> – The route could be done in the opposite direction.'
+      notes:'<strong>SELECTED LODGE OR CAMP(SUBJECT TO AVAILABILITY)</strong> <br><strong>Masai Mara</strong> <br>- AA Lodge <br>- Sentrim Mara <br>- Fig Tree<strong><br>Amboseli</strong> <br>- Sentrim Tari Camp <br>- AA lodge <br> - Kilima Camp<br><strong>Tsavo East </strong> <br>- Sentrim Tari Camp <br>- Manyatta Luxury Camp <br>- Voi Safari Lodge <br>- Voi Wildlife Lodge'
 
 
     },
@@ -236,11 +236,11 @@ export class SafariService {
 
         }
       ],
-      notes:'<strong>Notes</strong>– The lodges and tented camps are chosen based on the safari period and the movement of the animals in certain areas of the park, so that you can visit the areas richest in animals.'
+       notes:'<strong>SELECTED LODGE OR CAMP(SUBJECT TO AVAILABILITY)</strong> <br><strong>Masai Mara</strong> <br>- AA Lodge <br>- Sentrim Mara <br>- Fig Tree <br><strong>Lake Nakuru</strong> <br> Lake Nakuru Lodge <br><strong>Amboseli</strong> <br>- Sentrim Tari Camp <br>- AA lodge <br> - Kilima Camp<br><strong>Tsavo East </strong> <br>- Sentrim Tari Camp <br>- Manyatta Luxury Camp <br>- Voi Safari Lodge <br>- Voi Wildlife Lodge'
     },
     {
       name:'SAFARI MUFASA',
-      title2:'7 DAYS SAFARI 6 NIGHTS - MASAI MARA - LAKE NAKURU -AMBOSELI - TSAVO EAST - WATAMU',
+      title2:'7 DAYS SAFARI 6 NIGHTS - MASAI MARA - LAKE NAKURU -AMBOSELI -TAITA HILLS - TSAVO EAST - WATAMU',
       duration:7,
       days:[
         {
@@ -280,7 +280,7 @@ export class SafariService {
           description:'We wake up at 5.00am, go to take a shower, then go to have breakfast, after breakfast we leave for the game drive in the morning, we look for animals until 10.30am, then we leave the park, take the road to Watamu, at 1.00pm we return to the hotel / villa (private house).'
         }
       ],
-      notes:'– The lodges and tented camps are chosen based on the safari period and the movement of the animals in certain areas of the park, so that you can visit the areas richest in animals.'
+      notes:'<strong>SELECTED LODGE OR CAMP(SUBJECT TO AVAILABILITY)</strong> <br><strong>Masai Mara</strong> <br>- AA Lodge <br>- Sentrim Mara <br>- Fig Tree <br> <strong>Lake Nakuru</strong> <br> Lake Nakuru Lodge <br><strong>Amboseli</strong> <br>- Sentrim Tari Camp <br>- AA lodge <br> - Kilima Camp<br><strong>Tsavo East </strong> <br>- Sentrim Tari Camp <br>- Manyatta Luxury Camp <br>- Voi Safari Lodge <br>- Voi Wildlife Lodge'
 
     }
   ]

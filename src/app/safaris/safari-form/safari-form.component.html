@@ -5,12 +5,23 @@
         
     </div>
    
-    <form [formGroup]="safariForm" (ngSubmit)="onSubmit()" class="space-y-6 w-full lg:w-2/3">
+    <form [formGroup]="safariForm" (ngSubmit)="sendEmail($event)"  class="space-y-6 w-full lg:w-2/3">
+        <div class="w-full">
+            <label class="block text-gray-700 font-medium">Name</label>
+            <input type="name" formControlName="name" name="name"  placeholder="Enter your name"
+                class="w-full p-2 border-b border-gray-400 focus:outline-none focus:border-amber-500">
+        </div>
+        <div *ngIf="(safariForm.get('name')?.invalid && (safariForm.get('name')?.touched || safariForm.get('name')?.dirty))" 
+        class="text-red-500 text-sm mt-2 hidden lg:flex">
+        <p *ngIf="safariForm.get('name')?.errors?.['required']">
+            <i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please fill your name.
+        </p>
+        </div>
 
         <div class="flex flex-col lg:flex-row gap-6">
             <div class="w-full lg:w-1/2">
                 <label class="block text-gray-700 font-medium">No. of Adults</label>
-                <input type="number" formControlName="adults" min="1" placeholder="Enter number of adults"
+                <input type="number" formControlName="adults" name="adults" min="1" placeholder="Enter number of adults"
                     class="w-full p-2 border-b border-gray-400 focus:outline-none focus:border-amber-500">
             </div>
             <div *ngIf="(safariForm.get('adults')?.invalid && (safariForm.get('adults')?.touched || safariForm.get('adults')?.dirty))" 
@@ -22,7 +33,7 @@
 
             <div class="w-full lg:w-1/2">
                 <label class="block text-gray-700 font-medium">No. of Children</label>
-                <input type="number" formControlName="children" min="0" placeholder="Enter number of children"
+                <input type="number" formControlName="children" name="children"  placeholder="Enter number of children"
                     class="w-full p-2 border-b border-gray-400 focus:outline-none focus:border-amber-500">
             </div>
 
@@ -37,7 +48,7 @@
 
         <div class="mt-4 flex flex-col gap-0">
             <p class="text-xl font-normal">Interested In</p>
-            <select formControlName="safari" class="mt-4 w-full rounded-lg focus:ring-1 focus:outline-none focus:ring-amber-500 border border-black hover:border-amber-500">
+            <select formControlName="safari" name="safari" class="mt-4 w-full rounded-lg focus:ring-1 focus:outline-none focus:ring-amber-500 border border-black hover:border-amber-500">
                 <option value="" disabled selected>Choose safari</option>
                 <option *ngFor="let safari of allSafaris" [value]="safari.title2">
                     {{safari.title2}}
@@ -50,7 +61,7 @@
 
         <div>
             <label class="block text-gray-700 font-medium">Email</label>
-            <input type="email" formControlName="email" placeholder="Enter your email"
+            <input type="email" formControlName="email" name="email" placeholder="Enter your email"
                 class="w-full p-2 border-b border-gray-400 focus:outline-none focus:border-amber-500">
                 <div *ngIf="safariForm.get('email')?.invalid && (safariForm.get('email')?.touched || safariForm.get('email')?.dirty)" class="text-red-500 text-sm">
                     <p *ngIf="safariForm.get('email')?.errors?.['required']"><i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please enter a valid email.</p>
@@ -60,8 +71,14 @@
 
         <div>
             <label class="block text-gray-700 font-medium">Whatsapp Number</label>
-            <input type="tel" formControlName="phone" placeholder="Enter whatsapp number"
+            <input type="tel" formControlName="phone" name="phone" placeholder="Enter whatsapp number"
                 class="w-full p-2 border-b border-gray-400 focus:outline-none focus:border-amber-500">
+        </div>
+        <div *ngIf="(safariForm.get('phone')?.invalid && (safariForm.get('phone')?.touched || safariForm.get('phone')?.dirty))" 
+        class="text-red-500 text-sm mt-2 hidden lg:flex">
+        <p *ngIf="safariForm.get('phone')?.errors?.['required']">
+            <i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please enter your number.
+        </p>
         </div>
        
         
@@ -70,13 +87,13 @@
             <label class="block text-gray-700 font-medium">Departure Day</label>
             <div class="cursor-pointer w-full p-2 border-b border-gray-400 focus:outline-none focus:border-amber-500"
                 (click)="openDatePicker()">
-                <input type="date" formControlName="departure" #checkin class="w-full bg-transparent outline-none cursor-pointer">
+                <input type="date" formControlName="departure" name="departure" #checkin class="w-full bg-transparent outline-none cursor-pointer">
             </div>
         </div>
 
         <div>
             <label class="block text-gray-700 font-medium">Message</label>
-            <textarea formControlName="message" rows="4" placeholder="Your message..."
+            <textarea formControlName="message" name="message" rows="4" placeholder="Your message..."
                 class="w-full p-2 border-b border-gray-400 focus:outline-none focus:border-amber-500"></textarea>
         </div>
 
