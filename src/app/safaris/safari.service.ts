@@ -50,7 +50,7 @@ export class SafariService {
       
       image:'/images/leo.gif',
       title:'SAFARI ZAZU',
-      title2:'4 DAY 3 NIGHTS - AMBOSELI -TAITA HILLS - TSAVO EAST ',
+      title2:'4 DAY 3 NIGHTS - TAITA HILLS - AMBOSELI  - TSAVO EAST' ,
 
       description:'These 3 parks offer some of the best opportunities to see African wildlife , plus the landscapes are at their most beautiful after the rainy season, when everything seems to...',
       description2:'Being a corridor between Tsavo East and Tsavo West, the <strong>Taita Hills</strong> are the ideal place to go on a safari different from the others. <br>They are made up of three massifs: <strong>Dabida, Sagalla</strong> in the southern part of the Voi municipality and Kasigau in the south, near the border with Tanzania. In particular, the Dabida massif is the largest and highest of the three, with an altitude of 2,228 meters.<br><br><strong>Amboseli</strong> is known to be the<strong> best place in the world</strong> to get close to wild elephants, on the other hand other attractions of the park include the opportunity to meet Maasai and visit the Maasai village. Finally the park also has a <strong>breathtaking view of Mount Kilimanjaro</strong> , the highest free-standing mountain in the world.<br><br>In conclusion,These 3 parks offer some of the best opportunities to see <strong>African wildlife</strong> , plus the landscapes are at their most beautiful after the rainy season, when everything seems to take on pink tones and the acacia trees are covered in beautiful white flowers.'
@@ -132,7 +132,7 @@ export class SafariService {
     },
     {
       name:'SAFARI ZAZU',
-      title2:'4 DAY 3 NIGHTS SAFARI AMBOSELI -TAITA HILLS - TSAVO EAST ',
+      title2:'4 DAY 3 NIGHTS SAFARI TAITA HILLS - AMBOSELI  - TSAVO EAST ',
       duration:4,
       days:[
         {
@@ -159,7 +159,7 @@ export class SafariService {
 
         }
       ],
-      notes:'<strong>SELECTED LODGE OR CAMP(SUBJECT TO AVAILABILITY)</strong> <br><strong>Amboseli</strong> <br>- Sentrim Tari Camp <br>- AA lodge <br> - Kilima Camp<br><strong>Tsavo East </strong> <br>- Sentrim Tari Camp <br>- Manyatta Luxury Camp <br>- Voi Safari Lodge <br>- Voi Wildlife Lodge <br> <strong>Taita Hills</strong> <br>- Sarova Salt Lick Game Lodge <br><strong>Masai Mara</strong> <br>- AA Lodge <br>- Sentrim Fig Tree'
+      notes:'<strong>SELECTED LODGE OR CAMP(SUBJECT TO AVAILABILITY)</strong> <br><strong>Amboseli</strong> <br>- Sentrim Tari Camp <br>- AA lodge <br> - Kilima Camp<br><strong>Tsavo East </strong> <br>- Sentrim Tari Camp <br>- Manyatta Luxury Camp <br>- Voi Safari Lodge <br>- Voi Wildlife Lodge <br> <strong>Taita Hills</strong> <br>- Sarova Salt Lick Game Lodge'
     },
     {
       name:'SAFARI RAFIKI',

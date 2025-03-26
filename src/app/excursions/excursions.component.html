@@ -1,0 +1,19 @@
+<div class="pt-24">
+    <div>
+        <img src="" alt="">
+        <div>
+            <p>Excursions</p>
+        </div>
+    </div>
+
+    
+    <div *ngFor="let item of excursions; let i = index" class="flex flex-col lg:grid lg:grid-cols-2 gap-4 mb-4">
+        <!-- Image -->
+        <img [src]="item.image" alt="Excursion Image" class="h-96 w-full object-cover p-6">
+      
+        <!-- Description -->
+        <p *ngIf="excursionItenary[i]" [innerHTML]="excursionItenary[i].description" class="p-6">{{ excursionItenary[i].description }}</p>
+      </div>
+      
+    
+</div>
