@@ -1,19 +1,38 @@
 <div class="pt-24">
-    <div>
-        <img src="" alt="">
-        <div>
-            <p>Excursions</p>
+    <div class="relative">
+        <img class="w-full lg:h-screen object-cover" src="/images/exc.jpg" alt="">
+        <div class="absolute inset-0 bg-black/20 flex  justify-center items-center ">
+            <p class="text-4xl lg:text-8xl text-white font-jaini">Explore, Discover, Experience</p>
         </div>
     </div>
 
     
-    <div *ngFor="let item of excursions; let i = index" class="flex flex-col lg:grid lg:grid-cols-2 gap-4 mb-4">
+    <div *ngFor="let item of excursions; let i = index" class="flex flex-col lg:grid lg:grid-cols-2 gap-2">
         <!-- Image -->
-        <img [src]="item.image" alt="Excursion Image" class="h-96 w-full object-cover p-6">
+        <p class="lg:hidden font-alfa text-5xl text-green-500 text-center pt-2">{{item.title}}</p>
+        <img 
+        [src]="item.image" 
+        alt="Excursion Image"
+        class="excursion-image h-96 w-full object-cover p-6 transform -translate-x-full opacity-0 transition-all duration-1000 ease-out"
+        [class.translate-x-0]="isVisible[i]"
+        [class.opacity-100]="isVisible[i]"
+      >
       
         <!-- Description -->
-        <p *ngIf="excursionItenary[i]" [innerHTML]="excursionItenary[i].description" class="p-6">{{ excursionItenary[i].description }}</p>
+         <div class="flex flex-col p-6 gap-y-4">
+            <p class="hidden lg:flex font-alfa text-5xl text-green-500">{{item.title}}</p>
+            <p *ngIf="excursionItenary[i]" [innerHTML]="excursionItenary[i].description" class="font-mono text-sm">{{ excursionItenary[i].description }}</p>
+            <button (click)="scrollToForm(item.title)" class="text-start bg-green-600 hover:text-green-600 hover:border hover:border-green-600 hover:bg-white text-white  text-xl w-1/3 lg:w-32 px-2.5 py-1.5">Book Now</button>
+         
+         </div>
+        
       </div>
+<div  *ngIf="selectedExcursion">
+    <app-excursions-form id="excursionForm"  [selectedExcursion]="selectedExcursion"/>
+</div>
+
+<app-excursion-slider/>
+      
       
     
 </div>

@@ -1,1 +1,106 @@
-<p>excursions-form works!</p>
+<div class="text-center py-4">
+    <p class="text-3xl font-semibold font-jaini uppercase">Request Excursion Quotation</p>
+    
+</div>
+<div class=" px-6 lg:mx-16 pt-6 flex justify-center items-center shadow-2xl pb-4  rounded-4xl">
+   
+    <form [formGroup]="excursionForm" (ngSubmit)="onSubmit()" class="space-y-6 w-full lg:w-2/3">
+        <div>
+            <label class="block text-gray-700 font-medium">Name</label>
+            <input type="text" formControlName="name" placeholder="Enter your name" class="w-full p-2 border border-gray-400 focus:outline-none focus:border-teal-500">
+            <div *ngIf="excursionForm.get('name')?.invalid && (excursionForm.get('name')?.touched || excursionForm.get('name')?.dirty)" class="text-red-500 text-sm">
+                <p *ngIf="excursionForm.get('name')?.errors?.['required']"><i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please enter your name.</p>
+              </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-6">
+            <div class="w-full lg:w-1/2">
+                <label class="block text-gray-700 font-medium">No. of Adults</label>
+                <input type="number" formControlName="adults" min="1" placeholder="Enter number of adults"
+                    class="w-full p-2 border border-gray-400 focus:outline-none focus:border-teal-500">
+            </div>
+            <div *ngIf="(excursionForm.get('adults')?.invalid && (excursionForm.get('adults')?.touched || excursionForm.get('adults')?.dirty))" 
+            class="text-red-500 text-sm mt-2 lg:hidden">
+            <p *ngIf="excursionForm.get('adults')?.errors?.['required']">
+                <i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please fill the number of adults.
+            </p>
+            </div>
+
+            <div class="w-full lg:w-1/2">
+                <label class="block text-gray-700 font-medium">No. of Children</label>
+                <input type="number" formControlName="children"  placeholder="Enter number of children"
+                    class="w-full p-2 border border-gray-400 focus:outline-none focus:border-teal-500">
+            </div>
+
+        </div>
+        <div *ngIf="(excursionForm.get('adults')?.invalid && (excursionForm.get('adults')?.touched || excursionForm.get('adults')?.dirty))" 
+        class="text-red-500 text-sm mt-2 hidden lg:flex">
+        <p *ngIf="excursionForm.get('adults')?.errors?.['required']">
+            <i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please fill the number of adults.
+        </p>
+        </div>
+      
+
+        <div class="mt-4 flex flex-col gap-0">
+            <p class="text-xl font-normal">Interested In</p>
+            <select formControlName="excursion" class="mt-4 w-full  focus:ring-1 focus:outline-none focus:ring-teal-500 border border-black hover:border-teal-500">
+                <option value="" disabled selected>Choose excursion</option>
+                <option *ngFor="let excursion of allExcursions" [value]="excursion.title">
+                    {{excursion.title}}
+                </option>
+            </select>
+            <div *ngIf="excursionForm.get('excursion')?.invalid && (excursionForm.get('excursion')?.touched || excursionForm.get('excursion')?.dirty)" class="text-red-500 text-sm">
+                <p *ngIf="excursionForm.get('excursion')?.errors?.['required']"><i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please choose an excursion.</p>
+              </div>
+        </div>
+
+        <div>
+            <label class="block text-gray-700 font-medium">Email</label>
+            <input type="email" formControlName="email" placeholder="Enter your email"
+                class="w-full p-2 border border-gray-400 focus:outline-none focus:border-teal-500"
+                [class.border-red-500]="excursionForm.get('email')?.invalid && (excursionForm.get('email')?.touched || excursionForm.get('email')?.dirty)"
+                [attr.aria-invalid]="excursionForm.get('email')?.invalid ? 'true' : 'false'">
+            
+            <div *ngIf="excursionForm.get('email')?.invalid && (excursionForm.get('email')?.touched || excursionForm.get('email')?.dirty)" class="text-red-500 text-sm">
+                <p *ngIf="excursionForm.get('email')?.hasError('required')">
+                    <i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i> Email is required.
+                </p>
+                <p *ngIf="excursionForm.get('email')?.hasError('email')">
+                    <i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i> Please enter a valid email.
+                </p>
+            </div>
+        </div>
+        
+       
+
+        <div>
+            <label class="block text-gray-700 font-medium">Phone Number</label>
+            <input type="tel" formControlName="phone" placeholder="Enter your phone number"
+                class="w-full p-2 border border-gray-400 focus:outline-none focus:border-teal-500">
+        </div>
+       
+        
+
+        <div>
+            <label class="block text-gray-700 font-medium">Departure Day</label>
+            <div class="cursor-pointer w-full p-2 border border-gray-400 focus:outline-none focus:border-teal-500"
+                (click)="openDatePicker()">
+                <input type="date" formControlName="departure" #checkin class="w-full bg-transparent outline-none cursor-pointer">
+            </div>
+        </div>
+
+        <div>
+            <label class="block text-gray-700 font-medium">Message</label>
+            <textarea formControlName="message" rows="4" placeholder="Your message..."
+                class="w-full p-2 border border-gray-400 focus:outline-none focus:border-teal-500"></textarea>
+        </div>
+
+        <button type="submit"
+            class="w-1/2 lg:w-1/4 bg-black text-white font-semibold py-3 rounded-lg hover:border hover:border-black hover:text-black hover:bg-white transition">
+            SUBMIT
+        </button>
+
+    </form>
+</div>
+<app-snackbar/>
+

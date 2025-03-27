@@ -22,7 +22,7 @@ export class ExcursionsService {
   excursions:Excursion[]= [
     {
       
-      image:'/images/sard.jfif',
+      image:'/images/sardd.jfif',
       title:'Sardinia 2',
     
     },
