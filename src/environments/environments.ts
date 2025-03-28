@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    whatsappNumber: "254792264187"
+    whatsappNumber: "254787989070"
   };

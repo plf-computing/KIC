@@ -36,5 +36,24 @@
     
     
 </div>
+
+<div>
+    @for (air of airSafaris; track air.name) {
+        <div  class="md:grid md:grid-rows-subgrid md:row-span-3 flex flex-col justify-between items-start ">
+            <a [routerLink]="['/safaris', air.slug]" ><div class="relative group overflow-hidden ">
+                <img class=" rounded-2xl shadow-amber-400 h-72 w-96 md:w-72 object-cover" src="{{air.image}}" alt="">
+                <div class="absolute inset-0 bg-black/40 p-4 rounded-2xl flex flex-col justify-end items-start">
+                    <p class="font-extrabold text-3xl text-white font-alfa ">{{air.title}}</p>
+                    <p class="font-extrabold text-xl text-white font-alfa ">{{air.title2}}</p>
+                   
+                </div>
+                
+            </div></a>
+            
+           
+        </div>
+    }
+
+</div>
 </div>
 

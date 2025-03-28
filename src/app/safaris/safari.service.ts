@@ -22,6 +22,20 @@ interface SafariItenary{
   notes:string;
 }
 
+interface airDay{
+  day:string;
+  location:string;
+  description:string;
+}
+interface airSafari{
+  name:string;
+  title:string;
+  duration:number;
+  days:airDay[];
+  notes:string;
+
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -284,6 +298,52 @@ export class SafariService {
 
     }
   ]
+ airSafaris:airSafari[]=[
+  {
+    name:'SAFARI BY AIR',
+    title:'2DAYS 1 NIGHT',
+    duration:2,
+    days:[{
+      day:'Day 1',
+      location:'MASAI MARA',
+      description:'Departure is at 6.30am outside the hotel / private house. We go to have breakfast at the restaurant (the snack). At 8.00am we arrive at airport . 8:30am is the departure time at the airport The flight passes the lovely Mount Kilimanjaro‚ and lasts approximately 3 hours‚ 10 minutes. Our driver/guide will drive you to the booked hotel for check-in with a game drive en-route then have lunch. After lunch you will relax until 4:30p you will go and enjoy an afternoon game drive in a 4 X 4 jeep vehicle until 6:00pm. you go to take a shower then at 8.00pm dinner begins, after dinner who wants to go use WiFi or chat then you can go to sleep.'
+
+    },
+    {
+      day:'Day 2',
+      location:'MASAI MARA',
+      description:'you wake up at 6.00am then at 6.30am you have breakfast and at 7:00am you take your suitcase and leave for the  Early morning game drive in a  4 x 4 jeep vehicle enroute to the airstrip utill 11:00am, by 11:30am you will depart from mara airstrip , 1:00pm you will arrive at the airport and 1:15pm you will be transferred to your hotel/ private house.'
+    }
+  ],
+  notes:'<strong>What`s included</strong> <br>-Accommodation as specified in the itinerary on Full board basis in the lodge.<br>-Return Flights Malindi - Masai Mara - Malindi including all taxes.<br>-Safari Game drives in Masai Mara<br>-Airstrip transfers in Masai Mara<br>-24 hour Back Up support if required <br><br> <strong>Not included</strong> are drinks‚ tips and laundry.'
+  },
+  {
+    name:'SAFARI BY AIR 2',
+    title:'3DAYS 2 NIGHTS',
+    duration:3,
+    days:[
+      {
+      day:'Day 1',
+      location:'MASAI MARA',
+      description:'Departure is at 6.30am outside the hotel / private house. We go to have breakfast at the restaurant (the snack). At 8.00am we arrive at airport . 8:30am is the departure time at the airport The flight passes the lovely Mount Kilimanjaro‚ and lasts approximately 3 hours‚ 10 minutes. Our driver/guide will drive you to the booked hotel for check-in with a game drive en-route then have lunch. After lunch you will relax until 4:30p you will go and enjoy an afternoon game drive in a 4 X 4 jeep vehicle until 6:00pm. you go to take a shower then at 8.00pm dinner begins, after dinner who wants to go use WiFi or chat then you can go to sleep.'
+      },
+      {
+        day:'Day 2',
+        location:'MASAI MARA',
+        description:'you wake up at 6.00am then at 6.30am you have breakfast at the hotel and at 7:00am you start full day game drive in a 4 X 4 jeep vehicle with  packed lunch. Or a balloon ride (Extra cost) until 6:00pm. you go to take a shower then at 8.00pm dinner begins, after dinner who wants to go use WiFi or chat then you can go to sleep'
+      },
+      {
+        day:'Day 3',
+        location:'MASAI MARA',
+        description:'you wake up at 6.00am then at 6.30am you have breakfast and at 7:00am you take your suitcase and leave for the  Early morning game drive in a  4 x 4 jeep vehicle enroute to the airstrip utill 11:00am, by 11:30am you will depart from mara airstrip , 1:00pm you will arrive at the airport and 1:15pm you will be transferred to your hotel/ private house.'
+
+      }
+],
+notes:'<strong>What`s included</strong> <br>-Accommodation as specified in the itinerary on Full board basis in the lodge.<br>-Return Flights Malindi - Masai Mara - Malindi including all taxes.<br>-Safari Game drives in Masai Mara<br>-Airstrip transfers in Masai Mara<br>-24 hour Back Up support if required <br><br> <strong>Not included</strong> are drinks‚ tips and laundry.'
+}
+ ]
+
+
  
 
   getSafaris(){
@@ -292,6 +352,10 @@ export class SafariService {
 
   getAllSafarisItenaries(): SafariItenary[] {
     return this.safariItenaries;
+  }
+
+  getAllAirSafaris():airSafari[]{
+    return this.airSafaris
   }
   
 }
