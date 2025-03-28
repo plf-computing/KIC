@@ -29,11 +29,27 @@
      
 
     </div>
+    <div *ngIf="airSafaris" class="flex flex-col justify-between gap-y-6 mx-4 lg:mx-14 pt-4">
+      <p class="text-lG font-bold font-monomakh text-amber-900">{{airSafaris.name}}</p>
+
+      <div *ngIf="airSafaris.days && airSafaris.days.length > 0" class="flex flex-col justify-between gap-y-6">
+        <div *ngFor="let airDays of airSafaris.days" class="flex flex-col justify-between gap-y-4">
+          <p class="text-lg font-semibold text-amber-900">{{airDays.day}}</p>
+          <p class="font-semibold text-lg text-amber-900">{{airDays.location}}</p>
+          <p class="text-base leading-8 font-serif" >{{airDays.description}}</p>
+        </div>
+
+      </div>
+
+    </div>
 
     
       <div *ngIf="safariItenaries" class="pl-10 pt-10">
         <p [innerHTML]="safariItenaries.notes" class="font-serif italic pl-4">{{safariItenaries.notes}}</p>
 
+      </div>
+      <div *ngIf="airSafaris" class="pl-10 pt-10">
+        <p [innerHTML]="airSafaris.notes" class="font-serif italic pl-4">{{airSafaris.notes}}</p>
       </div>
       
     
@@ -135,7 +151,7 @@
     
   </div>
 
-  <app-safari-form/>
+  <app-safari-form  />
  
   
   

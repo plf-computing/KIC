@@ -1,28 +1,37 @@
 import { NgFor, NgIf } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { SafariService } from '../safari.service';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { SnackbarComponent } from '../../snackbar/snackbar.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-safari-form',
   imports: [FormsModule, NgFor, ReactiveFormsModule, NgIf, SnackbarComponent],
   templateUrl: './safari-form.component.html',
-  styleUrl: './safari-form.component.css'
+  styleUrl: './safari-form.component.css',
+  
 })
 export class SafariFormComponent {
   allSafaris:any;
+  allAirSafaris:any;
   safariForm!: FormGroup;
   whatsappNumber: string = "254792264187";
+ 
+  
 
   @ViewChild('checkin') checkinInput!: ElementRef;
   @ViewChild(SnackbarComponent) snackbar!: SnackbarComponent;
   
-  constructor(private fb: FormBuilder, private safariService:SafariService){}
+  
+  constructor(private fb: FormBuilder, private safariService:SafariService,private route:ActivatedRoute){}
 
   ngOnInit():void{
     this.allSafaris = this.safariService.getSafaris();
+    this.allAirSafaris = this.safariService.getAllAirSafaris();
+
+   
 
     this.safariForm = this.fb.group({
       name:['',Validators.required],
@@ -34,8 +43,17 @@ export class SafariFormComponent {
       email: ['', [Validators.required, Validators.email, Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]],
       message: ['', [Validators.maxLength(500)]]
     });
+   
+
+  
   
   }
+
+  trackByFn(index: number, item: any): string {
+    return item.title2 || item.name; // Use unique properties
+  }
+
+
 
 
   openDatePicker() {
@@ -43,6 +61,10 @@ export class SafariFormComponent {
       this.checkinInput.nativeElement.showPicker();
     }
   }
+  
+  
+  
+  
 
   public sendEmail(e: Event) {
     e.preventDefault();

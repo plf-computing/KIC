@@ -13,25 +13,36 @@ import { SafariFormComponent } from "../safari-form/safari-form.component";
 export class SafariDetailsComponent implements OnInit {
   safaris: any;
   safariItenaries: any;
+  airSafaris:any;
 
   constructor(private safariService:SafariService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const slug = this.route.snapshot.paramMap.get('title'); // Get slug from URL
-
+    const slug = this.route.snapshot.paramMap.get('slug'); // Get slug from URL
+  
+    
+  
     if (slug) {
-      // Find safari using slug instead of title
+      // Find matching Land Safari (by title)
       this.safaris = this.safariService.getSafaris().find(
         safari => this.generateSlug(safari.title) === slug
       );
-
+  
+      // Find matching Air Safari (by name)
+      this.airSafaris = this.safariService.getAllAirSafaris().find(
+        airSafari => this.generateSlug(airSafari.name) === slug
+      );
+  
       if (this.safaris) {
-        this.loadItinerary();
-      } else {
-        console.error('Safari not found:', slug);
-      }
+      this.loadItinerary();
+    }
+
+    if (this.airSafaris) {
+      this.loadAirItenary();
+    }
     }
   }
+  
 
   loadItinerary() {
     if (this.safaris) {
@@ -41,8 +52,18 @@ export class SafariDetailsComponent implements OnInit {
     }
   }
 
-  generateSlug(title: string): string {
-    return title
+  loadAirItenary(){
+    if(this.airSafaris){
+      this.airSafaris = this.safariService.getAllAirSafaris().find(
+        i => this.generateSlug(i.name) === this.generateSlug(this.airSafaris.name)
+      )
+    }
+  }
+
+  
+
+  generateSlug(text: string): string {
+    return text
     .toLowerCase()
     .replace(/-/g, '')  // ✅ Remove existing dashes
     .replace(/\s+/g, '-') // Replace spaces with dashes

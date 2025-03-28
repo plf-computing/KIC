@@ -50,9 +50,12 @@
             <p class="text-xl font-normal">Interested In</p>
             <select formControlName="safari" name="safari" class="mt-4 w-full rounded-lg focus:ring-1 focus:outline-none focus:ring-amber-500 border border-black hover:border-amber-500">
                 <option value="" disabled selected>Choose safari</option>
-                <option *ngFor="let safari of allSafaris" [value]="safari.title2">
-                    {{safari.title2}}
+                <option *ngFor="let safari of allSafaris" [value]="safari.title2" >
+                    {{safari.title2 }}
                 </option>
+                 <option *ngFor="let airSafari of allAirSafaris" [value]="airSafari.name">
+            {{ airSafari.name }}
+        </option>
             </select>
             <div *ngIf="safariForm.get('safari')?.invalid && (safariForm.get('safari')?.touched || safariForm.get('safari')?.dirty)" class="text-red-500 text-sm">
                 <p *ngIf="safariForm.get('safari')?.errors?.['required']"><i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please choose a safari.</p>

@@ -14,6 +14,7 @@ export class SafarisComponent implements OnInit {
   safaris:any[]=[];
   airSafaris:any[]=[];
   
+  
 
   ngOnInit(): void {
     this.safaris = this.safariService.getSafaris().map(safari => ({

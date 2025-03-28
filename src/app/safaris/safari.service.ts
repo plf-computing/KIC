@@ -28,6 +28,7 @@ interface airDay{
   description:string;
 }
 interface airSafari{
+  image:string;
   name:string;
   title:string;
   duration:number;
@@ -300,7 +301,8 @@ export class SafariService {
   ]
  airSafaris:airSafari[]=[
   {
-    name:'SAFARI BY AIR',
+    image:'/images/airmara.jpg',
+    name:'AIR SAFARI',
     title:'2DAYS 1 NIGHT',
     duration:2,
     days:[{
@@ -318,7 +320,8 @@ export class SafariService {
   notes:'<strong>What`s included</strong> <br>-Accommodation as specified in the itinerary on Full board basis in the lodge.<br>-Return Flights Malindi - Masai Mara - Malindi including all taxes.<br>-Safari Game drives in Masai Mara<br>-Airstrip transfers in Masai Mara<br>-24 hour Back Up support if required <br><br> <strong>Not included</strong> are drinks‚ tips and laundry.'
   },
   {
-    name:'SAFARI BY AIR 2',
+    image:'/images/maraair.jpg',
+    name:'SAFARI AIR ',
     title:'3DAYS 2 NIGHTS',
     duration:3,
     days:[

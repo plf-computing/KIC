@@ -12,7 +12,7 @@ export const routes: Routes = [
     path:'safaris',component:SafarisComponent
 },
 {
-    path:'safaris/:title',component:SafariDetailsComponent
+    path:'safaris/:slug',component:SafariDetailsComponent
 },
 {
     path:'excursions',component:ExcursionsComponent
