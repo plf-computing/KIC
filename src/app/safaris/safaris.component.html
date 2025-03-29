@@ -39,7 +39,7 @@
 <div class="flex justify-center items-center  py-4">
     <p class="text-5xl font-jaini">AIR TRAVEL</p>
 </div>
-<div class="flex flex-col lg:grid lg:grid-cols-2 place-items-center">
+<div class="flex flex-col lg:grid lg:grid-cols-2 place-items-center gap-4 lg:gap-0">
     @for (air of airSafaris; track air.name) {
         <div  class="md:grid md:grid-rows-subgrid md:row-span-3 flex flex-col justify-between items-center ">
             <a [routerLink]="['/safaris', air.slug]" ><div class="relative group overflow-hidden ">
