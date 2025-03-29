@@ -3,10 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { SafariService } from '../safari.service';
 import { NgFor, NgIf } from '@angular/common';
 import { SafariFormComponent } from "../safari-form/safari-form.component";
+import { SafariSliderComponent } from "../../safari-slider/safari-slider.component";
 
 @Component({
   selector: 'app-safari-details',
-  imports: [NgFor, NgIf, SafariFormComponent],
+  imports: [NgFor, NgIf, SafariFormComponent, SafariSliderComponent],
   templateUrl: './safari-details.component.html',
   styleUrl: './safari-details.component.css'
 })
@@ -15,9 +16,24 @@ export class SafariDetailsComponent implements OnInit {
   safariItenaries: any;
   airSafaris:any;
 
+  images = [
+    '/images/maraair.jpg',
+    '/images/mara.jpeg',
+    '/images/masai-mara.jpeg',
+    '/images/mara-masai.jpeg',
+    
+  ];
+
+  currentIndex = 0;
+  slideInterval: any;
+
+  
+
+
   constructor(private safariService:SafariService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.startAutoSlide();
     const slug = this.route.snapshot.paramMap.get('slug'); // Get slug from URL
   
     
@@ -68,6 +84,16 @@ export class SafariDetailsComponent implements OnInit {
     .replace(/-/g, '')  // ✅ Remove existing dashes
     .replace(/\s+/g, '-') // Replace spaces with dashes
     .replace(/[^a-z0-9-]/g, '');
+  }
+
+  startAutoSlide() {
+    this.slideInterval = setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.images.length;
+    }, 3000); // Change image every 3 seconds
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.slideInterval); // Cleanup interval when component is destroyed
   }
 }
 

@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { SafariService } from './safari.service';
 import { RouterLink } from '@angular/router';
+import { SafariSliderComponent } from "../safari-slider/safari-slider.component";
 
 @Component({
   selector: 'app-safaris',
-  imports: [RouterLink],
+  imports: [RouterLink, SafariSliderComponent],
   templateUrl: './safaris.component.html',
   styleUrl: './safaris.component.css'
 })

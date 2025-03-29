@@ -22,19 +22,19 @@ export class ExcursionsService {
   excursions:Excursion[]= [
     {
       
-      image:'/images/sardd.jfif',
+      image:'/images/sardegna2.jpeg',
       title:'Sardinia 2',
     
     },
     {
       
-      image:'/images/147.jpg',
+      image:'/images/blusafari.jpeg',
       title:'Blue Safari/Mangroves',
      
     },
     {
       
-      image:'/images/marafa.jpg',
+      image:'/images/marafa.jpeg',
       title:'Marafa/Devil`s Kitchen',
      
     }

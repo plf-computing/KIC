@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { SnackbarComponent } from '../../snackbar/snackbar.component';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from '../../../environments/environments';
 
 @Component({
   selector: 'app-safari-form',
@@ -17,7 +18,7 @@ export class SafariFormComponent {
   allSafaris:any;
   allAirSafaris:any;
   safariForm!: FormGroup;
-  whatsappNumber: string = "254792264187";
+  whatsappNumber: string = environment.whatsappNumber;
  
   
 

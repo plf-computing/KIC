@@ -1,1 +1,38 @@
-<p>safari-slider works!</p>
+<div class="pt-10 pb-6 flex justify-center items-center">
+    <p class="font-jaini text-4xl lg:text-4xl ">SAFARI GALLERY</p>
+  </div>
+  
+  <div class="relative w-full overflow-hidden rounded-lg px-4 pb-10">
+    <!-- Left Arrow (Correct Positioning) -->
+    <button 
+      (click)="prevSlide()" 
+      class="absolute top-1/2 left-1 sm:left-2 lg:left-5 transform -translate-y-1/2 
+              text-white hover:text-green-600 p-3 rounded-full opacity-75 hover:opacity-100 transition 
+             z-10  bg-opacity-50">
+             <i class="fa-solid fa-arrow-left fa-2x"></i>
+    </button>
+  
+    <!-- Small & Medium Screens: Show 1 image -->
+    <div class="sm:flex lg:hidden relative w-full h-96">
+      <img *ngIf="images[currentIndex]" 
+           [src]="images[currentIndex]" 
+           class="w-full h-full object-cover transition-opacity duration-1000 ease-in-out">
+    </div>
+  
+    <!-- Large Screens: Show 4 images -->
+    <div class="hidden lg:grid grid-cols-4 gap-4 h-96">
+      <img *ngFor="let img of getDisplayedImages()" 
+           [src]="img" 
+           class="w-full h-full rounded-2xl object-cover transition-opacity duration-1000 ease-in-out">
+    </div>
+  
+    <!-- Right Arrow (Correct Positioning) -->
+    <button 
+      (click)="nextSlide()" 
+      class="absolute top-1/2 right-1 sm:right-4 lg:right-5 transform -translate-y-1/2 
+             hover:text-green-600 text-white pr-3 opacity-75 hover:opacity-100 transition 
+             z-10  bg-opacity-50">
+             <i class="fa-solid fa-arrow-right fa-2x"></i>
+    </button>
+  </div>
+

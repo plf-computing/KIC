@@ -1,7 +1,26 @@
 <div class="pt-24">
-    <div >
-        <img class="w-full  object-cover" src="/images/masai.jpg" alt="">
+  
+  <div class="relative w-full overflow-hidden">
+    <div class="flex w-full transition-transform duration-700"
+         [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+      
+      <div *ngFor="let img of images; let i = index" class="min-w-full relative">
+        <img class="w-full h-80 lg:h-screen object-cover" [src]="img" alt="Slide">
+
+        <!-- Overlay text only on the first image -->
+        <div *ngIf="i === 0" 
+             class="absolute inset-0 flex items-center justify-center bg-black/20 text-white text-4xl lg:text-6xl font-bold font-jaini text-center px-4">
+             Embark on an Unforgettable Safari Adventure
+        </div>
+      </div>
+
     </div>
+</div>
+
+  
+  
+  
+  
 
     <div *ngIf="safaris && safariItenaries" class="flex flex-col justify-between mx-4 lg:mx-14 pt-10">
         <div class="flex flex-col justify-center items-center pb-6">
@@ -30,7 +49,7 @@
 
     </div>
     <div *ngIf="airSafaris" class="flex flex-col justify-between gap-y-6 mx-4 lg:mx-14 pt-4">
-      <p class="text-lG font-bold font-monomakh text-amber-900">{{airSafaris.name}}</p>
+      <p class="text-2xl text-amber-800 uppercase font-black font-mono relative  text-center">{{airSafaris.name}}</p>
 
       <div *ngIf="airSafaris.days && airSafaris.days.length > 0" class="flex flex-col justify-between gap-y-6">
         <div *ngFor="let airDays of airSafaris.days" class="flex flex-col justify-between gap-y-4">
@@ -39,7 +58,7 @@
           <p class="text-base leading-8 font-serif" >{{airDays.description}}</p>
         </div>
 
-      </div>
+    
 
     </div>
 
@@ -68,9 +87,7 @@
         <p class="text-sm md:text-base text-slate-500">
           <i class="fa-solid fa-arrow-right pr-2 text-yellow-400"></i>Local guide and/or authorized driver
         </p>
-        <p class="text-sm md:text-base text-slate-500">
-          <i class="fa-solid fa-arrow-right pr-2 text-red-600"></i>Entrance to the Natural Parks
-        </p>
+        
         <p class="text-sm md:text-base text-slate-500">
           <i class="fa-solid fa-arrow-right pr-2 text-yellow-400"></i>Entrance to the Natural Parks
         </p>
@@ -99,7 +116,7 @@
       <p class="text-2xl text-red-600 font-serif font-semibold">What's not included</p>
       <div class="flex-grow">
         <p class="text-sm md:text-base text-slate-500">
-          <i class="fa-solid fa-arrow-right pr-2 text-red-600"></i>Drinks with meals
+          <i class="fa-solid fa-arrow-right pr-2 text-red-600"></i>Drinks with meals,tips and laundry.
         </p>
         
         <p class="text-sm md:text-base text-slate-500">
@@ -148,10 +165,12 @@
   </div>
   
   <div>
+   
     
   </div>
 
   <app-safari-form  />
+  <app-safari-slider/>
  
   
   

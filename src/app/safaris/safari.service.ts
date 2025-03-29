@@ -30,7 +30,7 @@ interface airDay{
 interface airSafari{
   image:string;
   name:string;
-  title:string;
+  
   duration:number;
   days:airDay[];
   notes:string;
@@ -302,8 +302,8 @@ export class SafariService {
  airSafaris:airSafari[]=[
   {
     image:'/images/airmara.jpg',
-    name:'AIR SAFARI',
-    title:'2DAYS 1 NIGHT',
+    name:'AIR SAFARI - 2 DAYS 1 NIGHT',
+    
     duration:2,
     days:[{
       day:'Day 1',
@@ -317,12 +317,11 @@ export class SafariService {
       description:'you wake up at 6.00am then at 6.30am you have breakfast and at 7:00am you take your suitcase and leave for the  Early morning game drive in a  4 x 4 jeep vehicle enroute to the airstrip utill 11:00am, by 11:30am you will depart from mara airstrip , 1:00pm you will arrive at the airport and 1:15pm you will be transferred to your hotel/ private house.'
     }
   ],
-  notes:'<strong>What`s included</strong> <br>-Accommodation as specified in the itinerary on Full board basis in the lodge.<br>-Return Flights Malindi - Masai Mara - Malindi including all taxes.<br>-Safari Game drives in Masai Mara<br>-Airstrip transfers in Masai Mara<br>-24 hour Back Up support if required <br><br> <strong>Not included</strong> are drinks‚ tips and laundry.'
+  notes:'<strong>Package Specifications</strong> <br>-Accommodation as specified in the itinerary on Full board basis in the lodge.<br>-Return Flights Malindi - Masai Mara - Malindi including all taxes.<br>-Safari Game drives in Masai Mara<br>-Airstrip transfers in Masai Mara<br>-24 hour Back Up support if required.'
   },
   {
     image:'/images/maraair.jpg',
-    name:'SAFARI AIR ',
-    title:'3DAYS 2 NIGHTS',
+    name:'SAFARI AIR - 3DAYS 2 NIGHTS ',
     duration:3,
     days:[
       {
@@ -342,7 +341,7 @@ export class SafariService {
 
       }
 ],
-notes:'<strong>What`s included</strong> <br>-Accommodation as specified in the itinerary on Full board basis in the lodge.<br>-Return Flights Malindi - Masai Mara - Malindi including all taxes.<br>-Safari Game drives in Masai Mara<br>-Airstrip transfers in Masai Mara<br>-24 hour Back Up support if required <br><br> <strong>Not included</strong> are drinks‚ tips and laundry.'
+notes:'<strong>Package Specifications</strong> <br>-Accommodation as specified in the itinerary on Full board basis in the lodge.<br>-Return Flights Malindi - Masai Mara - Malindi including all taxes.<br>-Safari Game drives in Masai Mara<br>-Airstrip transfers in Masai Mara<br>-24 hour Back Up support if required.'
 }
  ]
 

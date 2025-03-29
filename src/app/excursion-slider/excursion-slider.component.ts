@@ -9,14 +9,14 @@ import { Component } from '@angular/core';
 })
 export class ExcursionSliderComponent {
   images = [
-    'images/sardd.jfif',
-    'images/146.jpg',
-    'images/147.jpg',
-    'images/marafa.jpg',
-    'images/',
-    'images/',
-    'images/',
-    'images/'
+    'images/sardegna2.jpeg',
+    'images/puffer.jpeg',
+    'images/snorkel.jpeg',
+    'images/choma.jpeg',
+    'images/snorkelling.jpeg',
+    'images/mangrove.jpeg',
+    'images/dolphins.jpeg',
+    'images/147.jpg'
     
 
   ];
