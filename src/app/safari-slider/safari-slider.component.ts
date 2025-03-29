@@ -12,7 +12,7 @@ export class SafariSliderComponent {
     'images/cheetah.jpeg',
     'images/lioness.jpeg',
     'images/cheetahs.jpeg',
-    'images/maraair.jpg',
+    'images/elepnt.webp',
     'images/airmara.jpg',
     'images/leop.jpg',
     'images/flmng.jpg',
