@@ -28,7 +28,7 @@ export class ExcursionsService {
     },
     {
       
-      image:'/images/bluesafarii.jpg',
+      image:'/images/lob.jpg',
       title:'Blue Safari/Mangroves',
      
     },
