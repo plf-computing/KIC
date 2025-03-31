@@ -1,0 +1,214 @@
+<div class="pt-24">
+    <div class="relative">
+      <img class="w-full h-full lg:h-96 opacity-70" src="/images/airr.webp" alt="">
+      <div class="absolute  inset-0 flex justify-center items-center bg-black/50">
+        <p class=" text-4xl lg:text-8xl font-bold font-jaini text-white text-center">Professional Airport Transfers</p>
+      </div>
+    </div>
+
+    <!-- airport transfers -->
+
+    <div class="flex flex-col lg:grid lg:grid-cols-2 justify-between lg:mx-10">
+        <div class="p-6">
+            <img class="w-full object-cover lg:h-96" src="/images/airport.jpg" alt="">
+        </div>
+        <div class="p-6 flex flex-col gap-y-6 ">
+            <h1 class="text-3xl font-semibold  font-jaini text-amber-500">PRIVATE AIRPORT TRANSFERS</h1>
+            <p class="text-base ">
+                Comfortable and Reliable transfers to and from Watamu at fixed and affordable rates. <br><br>
+                 Our prices include a licensed driver and vehicle, taxes and toll charges, luggage and extras such as child seats, waiting time and flight monitoring. <br><br>
+                Private tours, hire by the hour, van transfers, minibus and private coach transfers for large groups available on request. <br><br>
+                 Lowest price guaranteed.
+            </p>
+        </div>
+    </div>
+
+    <!-- sgr transfers -->
+
+    <div class="flex flex-col lg:grid lg:grid-cols-2 justify-between lg:mx-6">
+        <div class="p-6 flex flex-col gap-y-6 order-2 lg:order-1 ">
+            <h1 class="text-3xl font-semibold  font-jaini text-amber-500">SGR TRANSFERS</h1>
+            <p class="text-base ">
+                From the moment travelers step off the train at the SGR Mombasa Terminus, professional drivers are ready to whisk them away to their destination of choice.
+                <br><br> A fleet of well-maintained vehicles ensures a comfortable and smooth ride, allowing passengers to unwind and prepare for the experiences that await.
+            </p>
+        </div>
+        <div class="p-6 order-1 lg:order-2">
+            <img class="w-full object-cover lg:h-72" src="/images/sgr.jpg" alt="">
+        </div>
+      
+    </div>
+
+    <!-- why us -->
+     <div class="flex flex-col lg:grid lg:grid-cols-3 pt-10 justify-between gap-4 mx-20 pb-10">
+        <div class=" p-1 flex flex-col gap-y-2 justify-center items-center">
+            <i class="fa-solid fa-car fa-2x text-red-600"></i>
+            <p class="text-xl font-semibold font-mono text-green-600">Trained Drivers</p>
+            <p class="font-mono text-sm">We have courteous,punctual and licensed well trained drivers.</p>
+        </div>
+        <div class=" p-1 flex flex-col gap-y-2 justify-center items-center">
+            <i class="fa-solid fa-bell-concierge fa-2x text-red-600"></i>
+            <p class="text-xl font-semibold font-mono text-green-600">Dedicated Service</p>
+            <p class="font-mono text-sm">We will see that you arrive safely to your destination from your pick up location.</p>
+        </div>
+        <div class=" p-1 flex flex-col gap-y-2 justify-center items-center">
+            <i class="fa-regular fa-credit-card fa-2x text-red-600"></i>
+            <p class="text-xl font-semibold font-mono text-green-600">Lowest Price</p>
+            <p class="font-mono text-sm">Enjoy affordable transparent pricing.</p>
+        </div>
+     </div>
+
+     <!-- book form -->
+  <!-- Form Section -->
+<div class="pt-6 pb-4 px-4" *ngIf="!showSummary" id="formSection">
+    <form (ngSubmit)="reviewForm()">
+      <h3 class="flex text-3xl justify-center pb-2 text-gray-700 font-mono font-semibold">BOOK TRANSFER</h3>
+  
+      <div class="flex lg:mx-36 p-6 leading-10 text-black flex-col pt-6 bg-white border-2 border-black rounded-lg">
+        <div class="flex flex-col">
+          <label for="pickUp">Pick-up Location</label>
+          <select class="border-2 p-2 rounded-xl" name="pickUp" id="pickUp" [(ngModel)]="pickUp" required>
+            <option value="" disabled selected>Select a pick-up location</option>
+            <option *ngFor="let location of pickUpLocations" [value]="location">{{ location }}</option>
+          </select>
+        </div>
+  
+        <div class="flex flex-col">
+          <label for="dropOff">Drop-off Location</label>
+          <select class="border-2 p-2 rounded-xl" name="dropOff" id="dropOff" [(ngModel)]="dropOff" required>
+            <option value="" disabled selected>Select a Drop-off location</option>
+            <option *ngFor="let locations of dropOffLocations" [value]="locations">{{ locations }}</option>
+          </select>
+        </div>
+  
+        <div class="flex flex-col">
+          <label for="carSeater">Car-Seater</label>
+          <select class="border-2 p-2 rounded-xl" name="carSeater" id="carSeater" [(ngModel)]="carSeater" required>
+            <option value="" disabled selected>Select the type of car (Car seater)</option>
+            <option *ngFor="let seater of carSeaterOptions" [value]="seater">{{ seater }}</option>
+          </select>
+        </div>
+  
+        <div class="flex flex-col">
+          <label for="date">Arrival Date</label>
+          <div class="relative">
+            <input
+              id="date"
+              name="date"
+              type="date"
+              [(ngModel)]="date"
+              required
+              class="border-2 rounded-xl w-full p-2 appearance-none bg-transparent focus:outline-none"
+            />
+            <div class="absolute inset-0 cursor-pointer" onclick="document.getElementById('date').showPicker()"></div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col">
+          <label for="time">Arrival Time</label>
+          <div class="relative">
+            <input
+              id="time"
+              name="time"
+              type="time"
+              [(ngModel)]="time"
+              required
+              class="border-2 rounded-xl w-full p-2 appearance-none bg-transparent focus:outline-none"
+            />
+            <div class="absolute inset-0 cursor-pointer" onclick="document.getElementById('time').showPicker()"></div>
+          </div>
+        </div>
+        
+      </div>
+  
+      <h3 class="flex text-3xl justify-center uppercase pt-4 text-gray-700 font-mono font-semibold">Customer Details</h3>
+  
+      <div class="flex lg:mx-36 p-4 leading-10 flex-col pt-6 text-black bg-white border-2 border-black rounded-lg">
+        <div class="flex flex-col">
+          <label for="name">Name</label>
+          <input class="border-2 p-1 rounded-xl" type="text" name="name" id="name" placeholder="Please enter your name" [(ngModel)]="name" required>
+        </div>
+  
+        <div class="flex flex-col">
+          <label for="phoneNumber">Phone Number (WhatsApp)</label>
+          <input class="border-2 p-1 rounded-xl" type="tel" name="phoneNumber" id="phoneNumber" placeholder="Please use country code e.g +44" [(ngModel)]="phoneNumber" required>
+        </div>
+  
+        <div class="flex flex-col">
+          <label>Luggage</label>
+          <div>
+            <div class="flex items-center gap-2">
+              <input class="w-4 h-4 rounded-xl accent-yellow-500" type="checkbox" name="smallLuggage" id="small-luggage" (change)="toggleLuggage('Small Luggage', $event)">
+              <label for="small-luggage">Small Luggage</label>
+            </div>
+            <div class="flex items-center gap-2">
+              <input class="w-4 h-4 rounded-xl accent-yellow-500" type="checkbox" name="mediumLuggage" id="medium-luggage" (change)="toggleLuggage('Medium Luggage', $event)">
+              <label for="medium-luggage">Medium Luggage</label>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <button class="bg-black hover:bg-white hover:border-2 hover:border-black hover:text-black text-white text-lg p-2 rounded lg:mx-36 my-2" type="submit">
+        Review Details
+      </button>
+    </form>
+  </div>
+
+    <!-- Summary Section -->
+    <div *ngIf="showSummary" id="summarySection">
+        <h3 class="flex text-2xl justify-center text-black font-mono font-semibold uppercase">Summary of your Booking</h3>
+        <div class="p-4">
+            <table class="table-auto border-collapse border border-gray-400 w-full">
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-400 px-4 py-2 font-mono font-semibold">Customer Name</td>
+                        <td class="border border-gray-400 px-4 py-2 text-green-700 font-semibold uppercase">{{ name }}</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 px-4 py-2 font-mono font-semibold">Phone Number</td>
+                        <td class="border border-gray-400 px-4 py-2 text-green-700 font-semibold uppercase">{{ phoneNumber }}</td>
+                    </tr>
+                
+                  
+                    <tr>
+                        <td class="border border-gray-400 px-4 py-2 font-mono font-semibold">Pick-up Location</td>
+                        <td class="border border-gray-400 px-4 py-2 text-green-700 font-semibold uppercase">{{ pickUp }}</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 px-4 py-2 font-mono font-semibold">Drop-off Location</td>
+                        <td class="border border-gray-400 px-4 py-2 text-green-700 font-semibold uppercase">{{ dropOff }}</td>
+                    </tr>
+                   
+                    <tr>
+                        <td class="border border-gray-400 px-4 py-2 font-mono font-semibold">Arrival Date</td>
+                        <td class="border border-gray-400 px-4 py-2 text-green-700 font-semibold uppercase">{{ date }}</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 px-4 py-2 font-mono font-semibold">Arrival Time</td>
+                        <td class="border border-gray-400 px-4 py-2 text-green-700 font-semibold uppercase">{{ time }}</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 px-4 py-2 font-mono font-semibold">Type of Car</td>
+                        <td class="border border-gray-400 px-4 py-2 text-green-700 font-semibold uppercase">{{ carSeater }}</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 px-4 py-2 font-mono font-semibold">Luggage</td>
+                        <td class="border border-gray-400 px-4 py-2 text-green-700 font-semibold uppercase">{{ luggageAmount.join(', ') }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="pt-2 text-red-400 text-xl">Submitted details sent via <span class="text-green-600">WhatsApp!!</span></p>
+        </div>
+        
+        <div class="flex flex-row gap-6 pt-4 pl-4">
+            <button class="bg-red-700 hover:bg-red-500 p-2 text-white font-mono rounded uppercase" (click)="editForm()">Edit Details</button>
+            <button class="bg-yellow-400 hover:bg-yellow-500 p-2 text-white font-mono rounded uppercase"  (click)="submitForm()">Submit Booking</button>
+        </div>
+    </div>
+  
+
+  
+</div>
+
+
