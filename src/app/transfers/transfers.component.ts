@@ -17,7 +17,7 @@ export class TransfersComponent {
   time: string = ''
 
   name:string = ''
-  phoneNumber: string = environment.whatsappNumber
+  phoneNumber: string = ''
   flightArrivalTime:string = ''
   airlineName:string = ''
   luggageAmount:string[]=[]
@@ -28,6 +28,7 @@ export class TransfersComponent {
   
   showSummary:boolean = false;
   isEditMode:boolean = false;
+  whatsappNumber: string = environment.whatsappNumber
 
   toggleLuggage(luggage:string,event:Event){
     const isChecked = (event.target as HTMLInputElement).checked;
@@ -43,7 +44,7 @@ export class TransfersComponent {
       `Name: ${this.name}\nPhoneNumber: ${this.phoneNumber}\nLuggage:${this.luggageAmount.join(',')}\n\n`+
       `Pick up location: ${this.pickUp}\nDrop off location: ${this.dropOff}\nCar seater:${this.carSeater}\nArrival Date: ${this.date}\nArrival Time: ${this.time}`
     
-      const whatsappUrl = `https://wa.me/254789499089?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
     }
 

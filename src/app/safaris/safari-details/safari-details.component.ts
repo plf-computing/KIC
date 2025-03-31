@@ -18,9 +18,9 @@ export class SafariDetailsComponent implements OnInit {
 
   images = [
     '/images/maraair.jpg',
-    '/images/mara.jpeg',
+    '/images/safarielephant.jpg',
     '/images/masai-mara.jpeg',
-    '/images/mara-masai.jpeg',
+    '/images/safaribeast.jpg',
     
   ];
 
