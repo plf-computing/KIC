@@ -1,8 +1,18 @@
 <div class="pt-24">
-    <div class="relative">
-        <img class="w-full lg:h-screen object-cover" src="/images/exc.jpg" alt="">
-        <div class="absolute inset-0 bg-black/20 flex  justify-center items-center ">
-            <p class="text-4xl lg:text-8xl text-white font-jaini">Explore, Discover, Experience</p>
+    <div class="relative w-full overflow-hidden">
+        <div class="flex w-full transition-transform duration-700"
+             [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+          
+          <div *ngFor="let img of image; let i = index" class="min-w-full relative">
+            <img class="w-full h-80 lg:h-screen object-cover" [src]="img" alt="Slide">
+    
+            <!-- Overlay text only on the first image -->
+            <div *ngIf="i === 0" 
+                 class="absolute inset-0 flex items-center justify-center bg-black/20 text-white text-3xl lg:text-7xl font-bold font-jaini text-center px-4">
+                 EXPLORE,EXPERIENCE,DISCOVER
+            </div>
+          </div>
+    
         </div>
     </div>
 
@@ -13,7 +23,7 @@
         <img 
         [src]="item.image" 
         alt="Excursion Image"
-        class="excursion-image h-96 w-full object-cover p-6 transform -translate-x-full opacity-0 transition-all duration-1000 ease-out"
+        class="excursion-image h-96 w-full object-cover p-6 transform -translate-x-full opacity-0 transition-all duration-1000 ease-out shadow-2xl"
         [class.translate-x-0]="isVisible[i]"
         [class.opacity-100]="isVisible[i]"
       >

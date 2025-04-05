@@ -38,7 +38,7 @@ export class SafariFormComponent {
       name:['',Validators.required],
       safari: ['', Validators.required],
       adults: ['', [Validators.required, Validators.min(1), Validators.max(50)]],
-      children: ['',[Validators.min(1), Validators.max(50)]],
+      children: [''],
       departure: ['', Validators.required],
       phone: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email, Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]],

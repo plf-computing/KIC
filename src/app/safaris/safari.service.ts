@@ -159,7 +159,7 @@ export class SafariService {
         {
           day:'Day 2',
           location:'Amboseli – Taita Hills',
-          description:'He wakes up at 5.00am, takes a shower, then at 6.00am breakfast begins, after breakfast we take our suitcase and leave for the morning game drive, we look for animals that we havent seen until 9.00am, then we leave and take the road to Taita Hills, at 12.30pm we arrive at the lodge, first we go to eat lunch, then we move and go to the stilt house, at the stilt house we rest until 4.00pm, then we leave for the afternoon game drive, we look for animals until sunset, we go to take a shower, after the shower, dinner begins and then we go to rest.'
+          description:'We wake up at 5.00am, takes a shower, then at 6.00am breakfast begins, after breakfast we take our suitcase and leave for the morning game drive, we look for animals that we havent seen until 9.00am, then we leave and take the road to Taita Hills, at 12.30pm we arrive at the lodge, first we go to eat lunch, then we move and go to the stilt house, at the stilt house we rest until 4.00pm, then we leave for the afternoon game drive, we look for animals until sunset, we go to take a shower, after the shower, dinner begins and then we go to rest.'
 
         },
         {

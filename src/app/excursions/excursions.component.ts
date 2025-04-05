@@ -26,9 +26,22 @@ export class ExcursionsComponent {
     'images/dhow.jpg',
   ];
 
+  image = [
+    '/images/exc2.jpg',
+    '/images/exc3.jpg',
+    '/images/exc4.jpg',
+    '/images/exc.jpg',
+    
+  ];
+
+  currentIndex = 0;
+  slideInterval: any;
+
+
   constructor(private excursionService: ExcursionsService) {}
 
   ngOnInit(): void {
+    this.startAutoSlide();
     this.excursions = this.excursionService.getExcursions();
     this.excursionItenary = this.excursionService.getItenaries();
     this.isVisible = new Array(this.excursions.length).fill(false);
@@ -45,8 +58,18 @@ export class ExcursionsComponent {
         this.isVisible[index] = true;
       }
     });
+
+    
+  }
+  startAutoSlide() {
+    this.slideInterval = setInterval(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.image.length;
+    }, 3000); // Change image every 3 seconds
   }
 
+  ngOnDestroy() {
+    clearInterval(this.slideInterval); // Cleanup interval when component is destroyed
+  }
   
 
 
