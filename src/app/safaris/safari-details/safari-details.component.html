@@ -31,6 +31,8 @@
         <p [innerHTML]="safaris.description2" class="text-base leading-8 font-serif">{{safaris.description2}}</p>
 
     </div>
+
+
     <div *ngIf="safariItenaries" class="flex flex-col justify-between gap-y-6 mx-4 lg:mx-14 pt-4">
         <p class="font-semibold text-amber-900 text-lg pb-4">ITINERARY</p>
         <p class="text-lG font-bold font-monomakh text-amber-900">{{safariItenaries.name}}</p>
@@ -41,6 +43,10 @@
                 <p class="text-base leading-8 font-serif" >{{day.description}}</p>
 
             </div>
+            <div *ngIf="safariItenaries">
+              <p [innerHTML]="safariItenaries.notes" class="font-serif">{{safariItenaries.notes}}</p>
+
+            </div>
            
 
         </div>
@@ -48,6 +54,8 @@
      
 
     </div>
+
+    
     <div *ngIf="airSafaris" class="flex flex-col justify-between gap-y-6 mx-4 lg:mx-14 pt-4">
       <p class="text-2xl text-amber-800 uppercase font-black font-mono relative  text-center">{{airSafaris.name}}</p>
 
